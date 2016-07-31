@@ -32,7 +32,7 @@ https://www.npmjs.com/package/font-awesome-webpack
 CopyWebpackPlugin: It was big help too to integrate our asset in memory (we use webpack for hot-reload so asset should to added in memory)
 https://www.npmjs.com/package/copy-webpack-plugin
 
-HappyPack We use it but just it's desactivate due side effect on big change but it's compile faster!
+HappyPack We use it but just it's desactivate due side effect on big change but it's compile much faster!
 
 
 Finally, This project wouldn't be possible without the help of our many contributors, so [thank you](#thank-you) for all of your help.
@@ -92,19 +92,16 @@ The application structure presented in this boilerplate is **fractal**, where fu
 │   ├── static               # Static assets (not imported anywhere in source code)
 │   ├── styles               # Application-wide styles (generally settings)
 │   ├── store                # Redux-specific pieces
-│   │   ├── createStore.js   # Create and instrument redux store
-│   │   └── reducers.js      # Reducer registry and injection
+│   │   ├── store.js         # Create and instrument mobx store
+│   │   └── store 
+               ├ ui/auth/post #Injection store subclass
 │   └── routes               # Main route definitions and async split points
 │       ├── index.js         # Bootstrap main application routes with store
 │       └── Home             # Fractal route
-│           ├── index.js     # Route definitions and async split points
-│           ├── assets       # Assets required to render components
-│           ├── components   # Presentational React Components
-│           ├── container    # Connect components to actions and store
-│           ├── modules      # Collections of reducers/constants/actions
-│           └── routes **    # Fractal sub-routes (** optional)
-└── tests                    # Unit tests
-```
+│           ├── index.js     # Route definitions and async split points 
+            ├── Home.css     # some css
+            ├── Home.js      # The view for the component of this route 
+``` 
 
 ## Development
 
