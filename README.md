@@ -1,16 +1,18 @@
 # React Mobx Starter Kit
 
-This starter kit is designed to get you up and running with a bunch of awesome new front-end technologies, all on top of a configurable,
-
-This kit is actually working in developpement mode only .. why? because just i'm lazy and i still not checked webpack config for production...
+This starter kit is designed to get you up and running with a bunch of awesome new front-end technologies, all on top of a configurable, the kit is actually working in developpement mode only .. why? because just i'm lazy and i still not checked webpack config for production...
 So it's a boilerplate to start happy developping : We use last react-hot-loader! 
 
 In building this,  The more important thing for us was to have a good SSR (server side rendering) with not too much complicate code
-SO we decided to merge 4 important features
+
+We decided to merge 4 important features
 
 https://github.com/kriasoft/universal-router
+
 https://github.com/kriasoft/react-starter-kit
+
 https://github.com/foxhound87/rfx-stack
+
 https://github.com/gaearon/react-hot-loader
 
 
