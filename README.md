@@ -1,7 +1,12 @@
 # React Mobx Starter Kit
 
 This starter kit is designed to get you up and running with a bunch of awesome new front-end technologies, all on top of a configurable, the kit is actually working in developpement mode only .. why? because just i'm lazy and i still not checked webpack config for production...
+
 So it's a boilerplate to start happy developping : We use last react-hot-loader! 
+The bundle out is divided in 2 parts, you can check around 10Mb just for the app.js . Yes again this boilerplate is done for developing; 
+
+* NEXT TODO: Configure webpack for Production mode (it's not hard todo) 
+
 
 In building this,  The more important thing for us was to have a good SSR (server side rendering) with not too much complicate code
 
@@ -20,7 +25,7 @@ We decided to merge 5 important features!
 
 We stopped redux for mobx, not only for performance but Mobx is much simpler and easy to use. Thanks for rfx-stack to help us in this way;
 
-We do not use react-router that everybody use, just because universal-router is more simple and we prefer to know how it's working under the hood
+We do NOT use react-router that everybody use, just because universal-router is more simple and we prefer to know how it's working under the hood
  
 Our webpack build system is setup with the last hot reloading, CSS modules with Sass support, unit testing, code coverage reports, bundle splitting, and a whole lot more.
 
