@@ -13,7 +13,7 @@ import Html from './components/Html';
 import {ErrorPage} from './routes/error/ErrorPage';
 import errorPageStyle from './routes/error/ErrorPage.css';
 import PrettyError from 'pretty-error';
-import passport from './core/passport';
+//import passport from './core/passport';
 import models from './data/models';
 import schema from './data/schema';
 import myassets from './myassets';

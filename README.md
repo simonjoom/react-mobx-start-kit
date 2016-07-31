@@ -9,7 +9,7 @@ We decided to merge 5 important features!
 
 * [No react-router better then](https://github.com/kriasoft/universal-router)   ->https://github.com/kriasoft/universal-router
 
-* [Boilerplate SSR-nice](https://github.com/kriasoft/react-starter-kit)         ->https://github.com/kriasoft/react-starter-kit
+* [Boilerplate SSR-nice with isomorphic-style-loader](https://github.com/kriasoft/react-starter-kit)         ->https://github.com/kriasoft/react-starter-kit
 
 * [Store Mobx](https://github.com/foxhound87/rfx-stack)                         ->https://github.com/foxhound87/rfx-stack
 
@@ -36,6 +36,10 @@ CopyWebpackPlugin: It was big help too to integrate our asset in memory (we use 
 https://www.npmjs.com/package/copy-webpack-plugin
 
 HappyPack: We use it but just it's desactivate due side effect on big change but it's compile much faster!
+
+
+Final thanks for [The-ultimate-webpack-setup](http://www.christianalfoni.com/articles/2015_04_19_The-ultimate-webpack-setup) 
+THis post allow us to did the hot reload things and link assets on a same Port (8000) with a proxy 
 
 
 Finally, This project wouldn't be possible without the help of our many contributors, so [thank you](#thank-you) for all of your help.

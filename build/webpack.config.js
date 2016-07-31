@@ -404,7 +404,7 @@ clientConfig.entry = {
         ? [
         "font-awesome-webpack!" + paths.client('font-awesome.config.js'),
         'react-hot-loader/patch',
-        'webpack-dev-server/client?http://localhost:8000/',
+        'webpack-dev-server/client?http://localhost:/'+process.env['IO_PORT'],
         "webpack/hot/only-dev-server"
     ].concat(APP_ENTRY_PATHS)
         : APP_ENTRY_PATHS

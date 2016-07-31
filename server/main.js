@@ -86,7 +86,7 @@ if (config.env === 'development') {
                     lazy: false,
                     stats: config.compiler_stats
                 })
-                middl.listen("8000", "localhost");
+                middl.listen(process.env['IO_PORT'], "localhost");
                 return middl.middleware;
             });
 
