@@ -12,38 +12,6 @@ The primary goal of this project is to remain as **unopinionated** as possible. 
 
 Finally, This project wouldn't be possible without the help of our many contributors, so [thank you](#thank-you) for all of your help.
 
-## Table of Contents
-1. [Features](#features)
-1. [Requirements](#requirements)
-1. [Getting Started](#getting-started)
-1. [Application Structure](#application-structure)
-1. [Development](#development)
-  1. [Developer Tools](#developer-tools)
-  1. [Routing](#routing)
-1. [Testing](#testing)
-1. [Deployment](#deployment)
-1. [Build System](#build-system)
-  1. [Configuration](#configuration)
-  1. [Root Resolve](#root-resolve)
-  1. [Globals](#globals)
-  1. [Styles](#styles)
-  1. [Server](#server)
-  1. [Production Optimization](#production-optimization)
-1. [Learning Resources](#learning-resources)
-1. [FAQ](#troubleshooting)
-1. [Thank You](#thank-you)
-
-## Features
-* [react](https://github.com/facebook/react)
-* [redux](https://github.com/rackt/redux)
-* [react-router](https://github.com/rackt/react-router)
-* [react-router-redux](https://github.com/rackt/react-router-redux)
-* [webpack](https://github.com/webpack/webpack)
-* [babel](https://github.com/babel/babel)
-* [koa](https://github.com/koajs/koa)
-* [karma](https://github.com/karma-runner/karma)
-* [eslint](http://eslint.org)
-
 ## Requirements
 * node `^4.2.0`
 * npm `^3.0.0`
@@ -53,15 +21,13 @@ Finally, This project wouldn't be possible without the help of our many contribu
 After confirming that your development environment meets the specified [requirements](#requirements), you can follow these steps to get the project up and running:
 
 ```bash
-$ git clone https://github.com/davezuko/react-redux-starter-kit.git
-$ cd react-redux-starter-kit
+$ git clone https://github.com/simonjoom/react-start-mobxkit
+$ cd react-mobx-starter-kit
 $ npm install                   # Install project dependencies
 $ npm start                     # Compile and launch
 ```
 
 If everything works, you should see the following:
-
-<img src="http://i.imgur.com/zR7VRG6.png?2" />
 
 While developing, you will probably rely mostly on `npm start`; however, there are additional scripts at your disposal:
 
@@ -130,7 +96,7 @@ npm i --save-dev redux-devtools redux-devtools-log-monitor redux-devtools-dock-m
 Then follow the [manual integration walkthrough](https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md).
 
 ### Routing
-We use `react-router` [route definitions](https://github.com/reactjs/react-router/blob/master/docs/API.md#plainroute) (`<route>/index.js`) to define units of logic within our application. See the [application structure](#application-structure) section for more information.
+We Do not use `react-router` [route definitions](https://github.com/reactjs/react-router/blob/master/docs/API.md#plainroute) (`<route>/index.js`) to define units of logic within our application. See the [application structure](#application-structure) section for more information.
 
 ## Testing
 To add a unit test, simply create a `.spec.js` file anywhere in `~/tests`. Karma will pick up on these files automatically, and Mocha and Chai will be available within your test without the need to import them. If you are using `redux-cli`, test files should automatically be generated when you create a component or redux module.
@@ -255,12 +221,3 @@ In production, webpack will extract styles to a `.css` file, minify your JavaScr
 Having trouble? Check out our [FAQ](https://github.com/davezuko/react-redux-starter-kit/wiki/FAQ:-Frequently-Asked-Questions) or submit an issue. Please be considerate by only posting issues that are directly related to this project; questions about how to implement certain React or Redux features are both best suited for StackOverflow or their respective repositories.
 
 ## Thank You
-
-This project wouldn't be possible without help from the community, so I'd like to highlight some of its biggest contributors. Thank you all for your hard work, you've made my life a lot easier and taught me a lot in the process.
-
-* [Justin Greenberg](https://github.com/justingreenberg) - For all of your PR's, getting us to Babel 6, and constant work improving our patterns.
-* [Roman Pearah](https://github.com/neverfox) - For your bug reports, help in triaging issues, and PR contributions.
-* [Spencer Dixin](https://github.com/SpencerCDixon) - For your creation of [redux-cli](https://github.com/SpencerCDixon/redux-cli).
-* [Jonas Matser](https://github.com/mtsr) - For your help in triaging issues and unending support in our Gitter channel.
-
-And to everyone else who has contributed, even if you are not listed here your work is appreciated.
