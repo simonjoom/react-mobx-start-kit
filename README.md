@@ -25,8 +25,19 @@ Our webpack build system is setup with the last hot reloading, CSS modules with 
 The primary goal of this project is to remain as **unopinionated** as possible. 
 Its purpose is not to dictate your project structure or to demonstrate a complete sample application, but to provide a set of tools intended to make front-end development robust, easy, and, most importantly, fun. Check out the full feature list below!
 
+For information thks to some of these npm to help configurate webpack 
+
+font-awesome managed by font-awesome-webpack ! thks to him to help to add font-awesome
+https://www.npmjs.com/package/font-awesome-webpack
+
+CopyWebpackPlugin: It was big help too to integrate our asset in memory (we use webpack for hot-reload so asset should to added in memory)
+https://www.npmjs.com/package/copy-webpack-plugin
+
+HappyPack We use it but just it's desactivate due side effect on big change but it's compile faster!
+
 
 Finally, This project wouldn't be possible without the help of our many contributors, so [thank you](#thank-you) for all of your help.
+
 
 ## Requirements
 * node `^4.2.0`
@@ -112,7 +123,8 @@ npm i --save-dev redux-devtools redux-devtools-log-monitor redux-devtools-dock-m
 Then follow the [manual integration walkthrough](https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md).
 
 ### Routing
-We Do not use `react-router` [route definitions](https://github.com/reactjs/react-router/blob/master/docs/API.md#plainroute) (`<route>/index.js`) to define units of logic within our application. See the [application structure](#application-structure) section for more information.
+We Do not use `react-router` [route definitions]
+`<route>/index.js`) to define units of logic within our application. See the [application structure](#application-structure) section for more information.
 
 ## Testing
 To add a unit test, simply create a `.spec.js` file anywhere in `~/tests`. Karma will pick up on these files automatically, and Mocha and Chai will be available within your test without the need to import them. If you are using `redux-cli`, test files should automatically be generated when you create a component or redux module.
