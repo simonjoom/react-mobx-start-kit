@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-starter-kit",
-  "version": "3.0.0-alpha.0",
-  "description": "Get started with React, Redux, and React-Router!",
+  "name": "react-mobx-starter-kit",
+  "version": "1.0 beta",
+  "description": "Get started with React, Mobx and a Personal-Router!",
   "main": "index.js",
   "engines": {
     "node": ">=4.2.0",
