@@ -5,7 +5,7 @@ So it's a boilerplate to start happy developping : We use last react-hot-loader!
 
 In building this,  The more important thing for us was to have a good SSR (server side rendering) with not too much complicate code
 
-We decided to merge 4 important features
+We decided to merge 5 important features!
 
 * [No react-router better then](https://github.com/kriasoft/universal-router)   ->https://github.com/kriasoft/universal-router
 
@@ -14,6 +14,8 @@ We decided to merge 4 important features
 * [Store Mobx](https://github.com/foxhound87/rfx-stack)                         ->https://github.com/foxhound87/rfx-stack
 
 * [Last Hot Loader for development use](https://github.com/gaearon/react-hot-loader) ->https://github.com/gaearon/react-hot-loader
+
+* [NO Bootstrap better then... BASSCSS](http://www.basscss.com)  with font-awesome
 
 
 We stopped redux for mobx, not only for performance but Mobx is much simpler and easy to use. Thanks for rfx-stack to help us in this way;
@@ -82,14 +84,13 @@ The application structure presented in this boilerplate is **fractal**, where fu
 ```
 .
 ├── bin                      # Build/Start scripts
-├── blueprints               # Blueprint files for redux-cli
 ├── build                    # All build-related configuration
 │   └── webpack              # Environment-specific configuration files for webpack
 ├── config                   # Project configuration settings
-├── server                   # Koa application (uses webpack middleware)
+├── server                   # express application 
 │   └── main.js              # Server application entry point
 ├── src                      # Application source code
-│   ├── main.js              # Application bootstrap and rendering
+│   ├── main.js              # Application rendering
 │   ├── components           # Reusable Presentational Components
 │   ├── containers           # Reusable Container Components
 │   ├── layouts              # Components that dictate major page structure
@@ -105,6 +106,9 @@ The application structure presented in this boilerplate is **fractal**, where fu
 │           ├── index.js     # Route definitions and async split points 
             ├── Home.css     # some css
             ├── Home.js      # The view for the component of this route 
+│        └── Root            # Fractal route
+│           ├── index.js     # Route definitions and async split points
+            ├── Root.js      # View of Root --> we added a debugger at the end of it to see the mobx-stores variable change 
 ``` 
 
 
