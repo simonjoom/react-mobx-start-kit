@@ -37,10 +37,13 @@ HappyPack We use it but just it's desactivate due side effect on big change but 
 
 Finally, This project wouldn't be possible without the help of our many contributors, so [thank you](#thank-you) for all of your help.
 
+## OPENSOURCE 
+You can use it for all you need :) be the first to contribute and find bugs
 
-## Requirements
-* node `^4.2.0`
-* npm `^3.0.0`
+
+## WE HIRE !
+We are tired to work alone on this, we hire everybody with very good skill in feathers and mobx to continu to develop it.
+
 
 ## Getting Started
 
@@ -102,6 +105,11 @@ The application structure presented in this boilerplate is **fractal**, where fu
             ├── Home.css     # some css
             ├── Home.js      # The view for the component of this route 
 ``` 
+
+
+## Requirements
+* node `^4.2.0`
+* npm `^3.0.0`
 
 ## Development
 
