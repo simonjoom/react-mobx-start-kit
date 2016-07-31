@@ -1,6 +1,6 @@
 module.exports = {
     // Default for the style loading
-  //styleLoader: require('extract-text-webpack-plugin').extract('style-loader', 'css-loader!less-loader'),
+  //styleLoader: require('extract-text-webpack-plugin').extract('style-loader', 'css-loader!less-loader'),s
 
   styleLoader: 'style-loader!css-loader!less-loader',
     styles: {

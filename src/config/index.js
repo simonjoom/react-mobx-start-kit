@@ -3,9 +3,9 @@ import _debug from 'debug'
 import { argv } from 'yargs'
 import ip from 'ip'
 
-const localip = ip.address()
-const debug = _debug('app:config')
-debug('Creating default configuration.')
+const localip = ip.address();;
+const debug = _debug('app:config');;
+debug('Creating default configuration.');;
 
 // ========================================================
 // Default Configuration
@@ -62,7 +62,7 @@ const config = {
     { type : 'text-summary' },
     { type : 'lcov', dir : 'coverage' }
   ]
-}
+};;
 
 /************************************************
 -------------------------------------------------
@@ -90,45 +90,45 @@ config.globals = {
   '__DEBUG__'    : config.env === 'development' && !argv.no_debug,
   '__COVERAGE__' : !argv.watch && config.env === 'test',
   '__BASENAME__' : JSON.stringify(process.env.BASENAME || '')
-}
+};;
 
 // ------------------------------------
 // Validate Vendor Dependencies
 // ------------------------------------
-const pkg = require('../../package.json')
+const pkg = require('../../package.json');;
 
 config.compiler_vendor = config.compiler_vendor
   .filter((dep) => {
-    if (pkg.dependencies[dep]) return true
+    if (pkg.dependencies[dep]) return true;;
 
     debug(
       `Package "${dep}" was not found as an npm dependency in package.json; ` +
       `it won't be included in the webpack vendor bundle.
        Consider removing it from vendor_dependencies in ~/config/index.js`
     )
-  })
+  });;
 
 // ------------------------------------
 // Utilities
 // ------------------------------------
-const resolve = path.resolve
+const resolve = path.resolve;;
 const base = (...args) =>
-  Reflect.apply(resolve, null, [config.path_base, ...args])
+  Reflect.apply(resolve, null, [config.path_base, ...args]);;
 
 config.utils_paths = {
   base   : base,
   client : base.bind(null, config.dir_client),
   dist   : base.bind(null, config.dir_dist)
-}
+};;
 
 // ========================================================
 // Environment Configuration
 // ========================================================
-debug(`Looking for environment overrides for NODE_ENV "${config.env}".`)
-const environments = require('./environments').default
-const overrides = environments[config.env]
+debug(`Looking for environment overrides for NODE_ENV "${config.env}".`);;
+const environments = require('./environments').default;;
+const overrides = environments[config.env];;
 if (overrides) {
-  debug('Found overrides, applying to default configuration.')
+  debug('Found overrides, applying to default configuration.');;
   Object.assign(config, overrides(config))
 } else {
   debug('No environment overrides found, defaults will be used.')

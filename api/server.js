@@ -29,7 +29,7 @@ const app = feathers().configure(configuration(path.join(__dirname,'/config'), '
 
 app.use(cors({credentials: true,allowedOrigins: [
         'http://localhost:8080', 'http://localhost:8000', 'http://localhost:3000'
-    ]}))
+    ]}));;
 
 app
   .use(compression())
@@ -39,9 +39,9 @@ app
   .configure(socketio((io) => io.set('origins', '*:*')))
   .configure(auth)
   .configure(initServicesAutoload)
-  .configure(apiAfterMiddleware)
+  .configure(apiAfterMiddleware);;
 //  .configure(start);
 
 let server = app.listen(process.env['API_PORT']);
-server.on('listening',() => logServerConfig('API'))
+server.on('listening',() => logServerConfig('API'));;
 

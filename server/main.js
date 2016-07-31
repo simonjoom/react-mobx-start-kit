@@ -13,8 +13,8 @@ import webpackdevMiddleware from 'webpack-dev-middleware'
 import applyExpressMiddleware from './lib/apply-express-middleware'
 
 
-const debug = _debug('app:server')
-const paths = config.utils_paths
+const debug = _debug('app:server');;
+const paths = config.utils_paths;;
 const app = express();
 
 
@@ -23,7 +23,7 @@ app.use(cors({
     credentials: true, allowedOrigins: [
         'http://localhost:8080', 'http://localhost:3000', 'http://localhost:8000'
     ]
-}))
+}));;
 
 // Enable koa-proxy if it has been enabled in the config.
 /*if (config.proxy && config.proxy.enabled) {
@@ -38,7 +38,7 @@ app.use(cors({
  })))
 
  */
-const compiler = webpack(webpackConfig)
+const compiler = webpack(webpackConfig);;
 let bundleStart, bundleStart0;
 let hotMiddlewares, webpackDevMiddlewareInstance, ignoreAssets2, ignoreAssets, publicPath, middl, enmid0, enmid1, isdone;
 // ------------------------------------
@@ -47,7 +47,7 @@ let hotMiddlewares, webpackDevMiddlewareInstance, ignoreAssets2, ignoreAssets, p
 if (config.env === 'development') {
 
 
-    publicPath = webpackConfig[0].output.publicPath
+    publicPath = webpackConfig[0].output.publicPath;;
     let addscript = [];
 
     compiler.compilers[0].plugin('compile', function () {
@@ -65,7 +65,7 @@ if (config.env === 'development') {
         console.log('Bundled in ' + (Date.now() - bundleStart0) + 'ms!');
         console.log(stats.assetsByChunkName);
         if (isdone) {
-            app.use(...hotMiddlewares)
+            app.use(...hotMiddlewares);;
 
             app.use(webpackDevMiddlewareInstance)
         }
@@ -85,7 +85,7 @@ if (config.env === 'development') {
                     noInfo: config.compiler_quiet,
                     lazy: false,
                     stats: config.compiler_stats
-                })
+                });;
                 middl.listen("8000", "localhost");
                 return middl.middleware;
             });
@@ -119,7 +119,7 @@ if (config.env === 'development') {
         'do not need an application server for this and can instead use a web ' +
         'server such as nginx to serve your static files. See the "deployment" ' +
         'section in the README for more information on deployment strategies.'
-    )
+    );;
 
     // Serving ~/dist by default. Ideally these files should be served by
     // the web server and not the app server, but this helps to demo the
@@ -166,7 +166,7 @@ compiler.plugin('done', () => {
 
         isdone = true;
     }
-})
+});;
 
 export default app
 

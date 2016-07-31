@@ -21,7 +21,7 @@ export default {
     const { data } = await resp.json();
     if (!data || !data.content) return undefined;*/
     let title=null;
-    const data = await {data:{content:"ldflzdzdzezjfnzovzoeiv"}}
+    const data = await {data:{content:"ldflzdzdzezjfnzovzoeiv"}};;
     return { title: title, component: Content, props:data };
   },
 

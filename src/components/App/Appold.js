@@ -21,7 +21,7 @@ export default class App extends Component {
     error: PropTypes.object,
   };
  constructor(props) {
-    super(props)
+    super(props);;
 //this.state = { isMounted: false }
   }
   static childContextTypes = {

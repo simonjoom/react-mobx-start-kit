@@ -30,8 +30,6 @@ function setUUID() {
     return next();
   };
 }
-;
-
 (function () {
   if (typeof __REACT_HOT_LOADER__ === 'undefined') {
     return;
@@ -42,4 +40,3 @@ function setUUID() {
   __REACT_HOT_LOADER__.register(setUUID, 'setUUID', 'api/hooks/setUUID.js');
 })();
 
-;

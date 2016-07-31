@@ -20,8 +20,6 @@ function connector(config) {
   _mongoose2.default.Promise = global.Promise;
   return _mongoose2.default.connect(uri);
 }
-;
-
 (function () {
   if (typeof __REACT_HOT_LOADER__ === 'undefined') {
     return;
@@ -30,4 +28,3 @@ function connector(config) {
   __REACT_HOT_LOADER__.register(connector, 'connector', 'api/connector.js');
 })();
 
-;

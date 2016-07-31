@@ -21,8 +21,6 @@ var _default = _mongoose2.default.model('post', new Schema({
 }));
 
 exports.default = _default;
-;
-
 (function () {
   if (typeof __REACT_HOT_LOADER__ === 'undefined') {
     return;
@@ -33,4 +31,3 @@ exports.default = _default;
   __REACT_HOT_LOADER__.register(_default, 'default', 'api/services/post/model.js');
 })();
 
-;

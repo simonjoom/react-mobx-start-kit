@@ -37,7 +37,7 @@ import {createMemoryHistory, useQueries} from 'history';
 import {match} from 'universal-router';
 //import withContext from './withContext';
 var proxy = require('http-proxy-middleware');
-const debug = _debug('app:server')
+const debug = _debug('app:server');;
 
 
 const app = express();
@@ -101,7 +101,7 @@ app.use('/assets/*', proxy({
  }
  );
  */
-let setinjectTapEventPlugin = true
+let setinjectTapEventPlugin = true;;
 let css = [];
 const data = {
     lang: 'en',
@@ -133,7 +133,7 @@ function render(template, component, context, actionResult, store, appstate) {
                   appstate={ appstate }>
             <App children={ component }/>
         </Provider>
-    )
+    );;
 
     /* withContext({
      //insertCss: styles => css.push(styles._getCss()), // eslint-disable-line
@@ -188,8 +188,8 @@ function createApp({routes, context, template, storetostore, store} = {}) {
 
             res.status(result.status || 200).send(html);
         } catch (error) {
-            console.log("error")
-            console.log(error)
+            console.log("error");;
+            console.log(error);;
             error.status = error.status || 500;
             try {
                 result = await match(routes, {...ctx, canonicalPath: req.path, path: '/error', error});
@@ -215,10 +215,10 @@ function initapp() {
     return async(req, res, next) => {
 //app.get('*', async (req, res, next) => {
         let addscript = [];
-        console.log(req.path)
+        console.log(req.path);;
         try {
             if ((/(\.ico|\.png|\.js|\.jpg|\.map|\.xml|\.txt)$/.test(req.path)) || (/socket.*/.test(req.path)) || (/sockjs-node.*/.test(req.path))) {
-                console.log(req.path)
+                console.log(req.path);;
                 await next()
             } else {
 
@@ -227,7 +227,7 @@ function initapp() {
                     ui: {
                         theme: {mui: {userAgent: JSON.stringify(req.headers['user-agent'])}}
                     }
-                }
+                };;
                 let store = $store.set(initialState);
 
                 console.log(store);
@@ -269,11 +269,11 @@ function initapp() {
 //   await next()
 
 
-    }
+    };;
     //)
 }
 //}
-app.use(initapp())
+app.use(initapp());;
 
 
 app.listen(3000, () => {

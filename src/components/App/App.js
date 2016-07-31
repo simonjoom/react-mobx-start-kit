@@ -49,7 +49,7 @@ class App extends Component {
     };
 
     constructor(props) {
-        super(props)
+        super(props);;
         this.props.context.styles = s;
     }
 
@@ -77,7 +77,7 @@ class App extends Component {
     }
 
     componentWillUnmount() {
-        console.log('demonte')
+        console.log('demonte');;
         this.removeCss();
         // this.removeCss2();
     }

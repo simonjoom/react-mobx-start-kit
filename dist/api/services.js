@@ -120,8 +120,6 @@ function setupServicesAutoload($props) {
 function initServicesAutoload() {
   new Services(this).init(servicesSetup);
 }
-;
-
 (function () {
   if (typeof __REACT_HOT_LOADER__ === 'undefined') {
     return;
@@ -138,4 +136,3 @@ function initServicesAutoload() {
   __REACT_HOT_LOADER__.register(initServicesAutoload, 'initServicesAutoload', 'api/services.js');
 })();
 
-;

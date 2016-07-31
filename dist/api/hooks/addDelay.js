@@ -10,8 +10,6 @@ function addDelay(delay) {
     setTimeout(next, delay);
   };
 }
-;
-
 (function () {
   if (typeof __REACT_HOT_LOADER__ === 'undefined') {
     return;
@@ -20,4 +18,3 @@ function addDelay(delay) {
   __REACT_HOT_LOADER__.register(addDelay, "addDelay", "api/hooks/addDelay.js");
 })();
 
-;

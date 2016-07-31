@@ -52,8 +52,6 @@ exports.log = log;
 exports.logerreur = logerreur;
 exports.logInit = logInit;
 exports.logServerConfig = logServerConfig;
-;
-
 (function () {
   if (typeof __REACT_HOT_LOADER__ === 'undefined') {
     return;
@@ -68,4 +66,3 @@ exports.logServerConfig = logServerConfig;
   __REACT_HOT_LOADER__.register(logServerConfig, "logServerConfig", "api/logger.js");
 })();
 
-;

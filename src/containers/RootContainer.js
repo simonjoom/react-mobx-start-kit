@@ -9,10 +9,10 @@ class RootContainer extends React.Component {
     routes: PropTypes.node.isRequired,
     routerKey: PropTypes.number,
     store: PropTypes.node.isRequired
-  }
+  };;
 
   render () {
-    const { history, routes, routerKey, store } = this.props
+    const { history, routes, routerKey, store } = this.props;;
 
     return (
 

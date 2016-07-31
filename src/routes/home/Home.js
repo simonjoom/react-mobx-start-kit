@@ -29,7 +29,7 @@ const Home = ({news,context,appstate})=>{
       </div>
     </div>
   );
-}
+};;
 /*
 Home.propTypes = {
   news: PropTypes.arrayOf(PropTypes.shape({

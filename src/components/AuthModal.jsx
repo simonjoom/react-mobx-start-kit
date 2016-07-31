@@ -77,7 +77,7 @@ const AuthModal2 = ({open, showSection, forms, s}) => {
             </div>
         </Dialog>
     );
-}
+};;
 
 AuthModal2.propTypes = {
     open: React.PropTypes.bool,

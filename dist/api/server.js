@@ -78,8 +78,6 @@ var server = app.listen(3030);
 server.on('listening', function () {
   return (0, _logger.logServerConfig)('API');
 });
-;
-
 (function () {
   if (typeof __REACT_HOT_LOADER__ === 'undefined') {
     return;
@@ -90,4 +88,3 @@ server.on('listening', function () {
   __REACT_HOT_LOADER__.register(server, 'server', 'api/server.js');
 })();
 
-;

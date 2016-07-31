@@ -11,8 +11,6 @@ function timestamp(name) {
     next();
   };
 }
-;
-
 (function () {
   if (typeof __REACT_HOT_LOADER__ === 'undefined') {
     return;
@@ -21,4 +19,3 @@ function timestamp(name) {
   __REACT_HOT_LOADER__.register(timestamp, "timestamp", "api/hooks/timestamp.js");
 })();
 
-;

@@ -23,8 +23,6 @@ var _default = {
 }; // import { hooks as auth } from 'feathers-authentication';
 
 exports.default = _default;
-;
-
 (function () {
   if (typeof __REACT_HOT_LOADER__ === 'undefined') {
     return;
@@ -33,4 +31,3 @@ exports.default = _default;
   __REACT_HOT_LOADER__.register(_default, 'default', 'api/services/post/hooks.before.js');
 })();
 
-;

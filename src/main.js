@@ -37,7 +37,7 @@ const context = {
             if (element.getAttribute('name') === name) {
                 element.parentNode.removeChild(element);
             }
-        })
+        });;
         const meta = document.createElement('meta');
         meta.setAttribute('name', name);
         meta.setAttribute('content', content);
@@ -126,7 +126,7 @@ function createApp(history) {
         };
         //   return async () => {
         try {
-            const MOUNT_NODE = document.getElementById('root')
+            const MOUNT_NODE = document.getElementById('root');;
 
             if (location.pathname !== currentLocation)
                 result = await match(routes, ctx);
@@ -145,11 +145,11 @@ function createApp(history) {
                         if (__DEV__) {
                             console.log('React rendering. Stat:');
                             if (window.location.search.includes('debugRender')) {
-                                const {whyDidYouUpdate} = require('why-did-you-update')
+                                const {whyDidYouUpdate} = require('why-did-you-update');;
                                 whyDidYouUpdate(React)
                             }
                         }
-                        let store = hotRehydrate(appstate)
+                        let store = hotRehydrate(appstate);;
                         component = React.createElement(result.component, result.props);
                         if (setinjectTapEventPlugin) {
                             store.ui.myinjectTapEventPlugin(); // material-ui fix
@@ -162,7 +162,7 @@ function createApp(history) {
                                 </AppContainer>
                             </Provider>, MOUNT_NODE, () => {
                                 document.title = result.title || '';
-                                renderComplete("t")
+                                renderComplete("t");;
                                 resolve()
                             });
                     } catch (err) {
@@ -201,7 +201,7 @@ function createApp(history) {
 
                                 </Provider>, MOUNT_NODE, () => {
                                     document.title = result.title || '';
-                                    renderComplete("t")
+                                    renderComplete("t");;
                                     resolve();
                                 });
                         } catch (err) {
@@ -245,13 +245,13 @@ function createApp(history) {
 
 if (__DEV__ && module.hot) {
     module.hot.accept(['./routes/index', './components/App/App'], async function () {
-        let routes = require('./routes/index').default
+        let routes = require('./routes/index').default;;
         // Require the new version and render it instead
 
         let result = await match(routes, ctx);
         if (result && result.component) {
             component = React.createElement(result.component, result.props);
-            let store = hotRehydrate(appstate)
+            let store = hotRehydrate(appstate);;
             ReactDOM.render(
                 <Provider context={ context }
                           appstate={ store }>

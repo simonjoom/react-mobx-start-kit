@@ -47,7 +47,7 @@ const UserSubMenu = (s) => {
             </li>
         </ul>
     );
-}
+};;
 const MenuLinksDX = ({user, inline, authCheck, accountMenuIsOpen, s}) => (
     <span>
     <div className={cx(styles.divider, { 'border-top': !inline })}/>

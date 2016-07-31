@@ -579,9 +579,7 @@ module.exports =
   });
   
   */
-  ;
-  
-  (function () {
+      (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -612,9 +610,8 @@ module.exports =
   
     __REACT_HOT_LOADER__.register(initapp, 'initapp', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/server.js');
   })();
-
-  ;
-  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+    
+  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)));;
 
 /***/ },
 /* 2 */
@@ -762,9 +759,7 @@ module.exports =
   
   var _default = Html;
   exports.default = _default;
-  ;
-  
-  (function () {
+      (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -773,9 +768,8 @@ module.exports =
   
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/components/Html.js');
   })();
-
-  ;
-  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+    
+  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)));;
 
 /***/ },
 /* 14 */
@@ -815,9 +809,7 @@ module.exports =
     }
   
   };
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -829,9 +821,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(auth, 'auth', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/configauth.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 15 */
 /***/ function(module, exports) {
 
@@ -905,9 +895,7 @@ module.exports =
   var _default = (0, _withStyles2.default)(_ErrorPage2.default)(ErrorPage);
   
   exports.default = _default;
-  ;
-  
-  (function () {
+      (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -916,9 +904,8 @@ module.exports =
   
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/routes/error/ErrorPage.js');
   })();
-
-  ;
-  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+    
+  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)));;
 
 /***/ },
 /* 17 */
@@ -1425,9 +1412,7 @@ module.exports =
   
   var _default = _passport2.default;
   exports.default = _default;
-  ;
-
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -1435,9 +1420,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/core/passport.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 28 */
 /***/ function(module, exports) {
 
@@ -1520,9 +1503,7 @@ module.exports =
   exports.UserLogin = _UserLogin2.default;
   exports.UserClaim = _UserClaim2.default;
   exports.UserProfile = _UserProfile2.default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -1532,9 +1513,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/data/models/index.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -1569,9 +1548,7 @@ module.exports =
   
   var _default = sequelize;
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -1581,9 +1558,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/data/sequelize.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 32 */
 /***/ function(module, exports) {
 
@@ -1644,9 +1619,7 @@ module.exports =
   
   var _default = User;
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -1656,9 +1629,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/data/models/User.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -1703,9 +1674,7 @@ module.exports =
   
   var _default = UserLogin;
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -1715,9 +1684,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/data/models/UserLogin.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -1760,9 +1727,7 @@ module.exports =
   
   var _default = UserClaim;
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -1772,9 +1737,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/data/models/UserClaim.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -1825,9 +1788,7 @@ module.exports =
   
   var _default = UserProfile;
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -1837,9 +1798,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/data/models/UserProfile.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -1887,9 +1846,7 @@ module.exports =
   
   var _default = schema;
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -1899,9 +1856,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/data/schema.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 38 */
 /***/ function(module, exports) {
 
@@ -1944,9 +1899,7 @@ module.exports =
   
   var _default = me;
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -1956,9 +1909,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/data/queries/me.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -1987,9 +1938,7 @@ module.exports =
   
   var _default = UserType;
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -1999,9 +1948,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/data/types/UserType.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -2289,9 +2236,7 @@ module.exports =
   
   var _default = content;
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -2315,9 +2260,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/data/queries/content.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 42 */
 /***/ function(module, exports) {
 
@@ -2372,9 +2315,7 @@ module.exports =
   
   var _default = ContentType;
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -2384,9 +2325,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/data/types/ContentType.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -2456,9 +2395,7 @@ module.exports =
   
   var _default = news;
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -2476,9 +2413,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/data/queries/news.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -2532,9 +2467,7 @@ module.exports =
   exports.Request = _nodeFetch.Request;
   exports.Headers = _nodeFetch.Headers;
   exports.Response = _nodeFetch.Response;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -2544,9 +2477,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(localFetch, 'localFetch', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/core/fetch/fetch.server.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 49 */
 /***/ function(module, exports) {
 
@@ -2712,9 +2643,7 @@ module.exports =
   
   var _default = config;
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -2738,9 +2667,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/config/index.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 51 */
 /***/ function(module, exports) {
 
@@ -3080,9 +3007,7 @@ module.exports =
   // Supply a key to the default export matching the NODE_ENV that you wish to target, and
   // the base configuration will apply your overrides before exporting itself.
   exports.default = _default;
-  ;
-
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -3090,9 +3015,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/config/environments.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -3124,9 +3047,7 @@ module.exports =
   
   var _default = NewsItemType;
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -3136,9 +3057,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/data/types/NewsItemType.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 57 */
 /***/ function(module, exports) {
 
@@ -3204,9 +3123,7 @@ module.exports =
    },*/
   ];
   exports.default = _default;
-  ;
-
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -3214,9 +3131,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/routes/index.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -3304,9 +3219,7 @@ module.exports =
     }
   };
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -3316,9 +3229,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/routes/home/index.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -3399,9 +3310,7 @@ module.exports =
   var _default = (0, _withStyles2.default)(_Home2.default)((0, _mobxReact.observer)(['context', 'appstate'])(Home));
   
   exports.default = _default;
-  ;
-  
-  (function () {
+      (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -3412,9 +3321,8 @@ module.exports =
   
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/routes/home/Home.js');
   })();
-
-  ;
-  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+    
+  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)));;
 
 /***/ },
 /* 61 */
@@ -3505,9 +3413,7 @@ module.exports =
     }
   };
   exports.default = _default;
-  ;
-
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -3515,9 +3421,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/routes/contact/index.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -3577,9 +3481,7 @@ module.exports =
   var _default = (0, _withStyles2.default)(_Contact2.default)(Contact);
   
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -3591,9 +3493,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/routes/contact/Contact.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -3672,9 +3572,7 @@ module.exports =
     }
   };
   exports.default = _default;
-  ;
-
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -3682,9 +3580,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/routes/root/index.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -3892,9 +3788,7 @@ module.exports =
   
   exports.default = _default;
   //Root.contextTypes = { setTitle: PropTypes.func.isRequired };
-  
-  ;
-  
+    
   (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
@@ -3906,9 +3800,8 @@ module.exports =
   
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/routes/root/Root.js');
   })();
-
-  ;
-  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+    
+  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)));;
 
 /***/ },
 /* 70 */
@@ -4039,18 +3932,15 @@ module.exports =
     }
   };
   exports.default = _default;
-  ;
-
-  (function () {
+      (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
 
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/routes/login/index.js');
   })();
-
-  ;
-  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+    
+  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)));;
 
 /***/ },
 /* 81 */
@@ -4230,9 +4120,7 @@ module.exports =
   var _default = (0, _withStyles2.default)(_Login2.default)(Login);
   
   exports.default = _default;
-  ;
-  
-  (function () {
+      (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -4243,9 +4131,8 @@ module.exports =
   
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/routes/login/Login.js');
   })();
-
-  ;
-  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+    
+  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)));;
 
 /***/ },
 /* 82 */
@@ -4348,9 +4235,7 @@ module.exports =
     }
   };
   exports.default = _default;
-  ;
-
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -4358,9 +4243,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/routes/register/index.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -4420,9 +4303,7 @@ module.exports =
   var _default = (0, _withStyles2.default)(_Register2.default)(Register);
   
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -4434,9 +4315,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/routes/register/Register.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -4564,9 +4443,7 @@ module.exports =
     }
   };
   exports.default = _default;
-  ;
-
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -4574,9 +4451,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/routes/content/index.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -4664,9 +4539,7 @@ module.exports =
   var _default = (0, _withStyles2.default)(_Content2.default)(Content);
   
   exports.default = _default;
-  ;
-  
-  (function () {
+      (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -4675,9 +4548,8 @@ module.exports =
   
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/routes/content/Content.js');
   })();
-
-  ;
-  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+    
+  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)));;
 
 /***/ },
 /* 90 */
@@ -4781,9 +4653,7 @@ module.exports =
       */
 
   exports.default = _default;
-  ;
-
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -4791,9 +4661,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/routes/error/index.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -5002,9 +4870,7 @@ module.exports =
   }, _temp)) || _class);
   var _default = App;
   exports.default = _default;
-  ;
-  
-  (function () {
+      (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -5015,9 +4881,8 @@ module.exports =
   
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/components/App/App.js');
   })();
-
-  ;
-  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+    
+  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)));;
 
 /***/ },
 /* 94 */
@@ -5531,9 +5396,7 @@ module.exports =
   var _default = (0, _withStyles2.default)(_Header2.default)(Header);
   
   exports.default = _default;
-  ;
-  
-  (function () {
+      (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -5542,9 +5405,8 @@ module.exports =
   
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/components/Header/Header.js');
   })();
-
-  ;
-  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+    
+  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)));;
 
 /***/ },
 /* 99 */
@@ -5724,9 +5586,7 @@ module.exports =
   }, _temp2);
   var _default = Link;
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -5740,9 +5600,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/components/Link/Link.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 102 */
 /***/ function(module, exports) {
 
@@ -5788,9 +5646,7 @@ module.exports =
   
   var _default = history;
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -5800,9 +5656,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/core/history.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 104 */
 /***/ function(module, exports) {
 
@@ -5824,7 +5678,7 @@ module.exports =
 /* 107 */
 /***/ function(module, exports) {
 
-  module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAACrRJREFUeNqcWAlQlFcSnosBhmFmBAaVG0RAEBQVUUh2jRKjiKJGEfFE8YisGkw066rrmd2o5bWaaIyaQuMRo/EAiRG8SojxwAMFEQWEkUMYkBlmmHtmu//9f+rtXzhFQlXXPN7r192vX/fX/X4+x/4fF4gHxAcSADnQvwJ6jksThxhz6TU+zU/u4RH8dv/43TCKMUhIkyP9y2cZx+Z3ZPGTh/nThpFKGOFOBAlp5Xyaj+1Vht+Z4O/KMNu7DBPYMZoxDJU4i739xe/96+BIB1epXFtf+7p4x9p7quoKLayZgUxAFuKw1PVJA0NcBn+2JcbFy8/H1K5qLvzHwmuauhoNbRwaZaWpS8+8y5NC+rSiPhPSfOM2f3NY4OwSzjBYLea3bRWlh36dl3hc39JkJBTwnNw9hR8dyZshC4nI4PEFPZg9Zp227Pb6pRkvzx+rhX87gPRARuJQdq+SuUZHmkSjD+duAk9Flh/fn1mweNJ2LpdbiB6UBvSdEzZ94QhQ+Kz58V30mnP47L/1HbX/7D5xb9/xHU0N1yt+PPTV1cwp2/lCx0J59LCpntGx3qVHdl+ljbHSHrd1x2Nc2lsYHyJZnzC3iZce33n7/En2heQhh0nXx67dNThk6ryNPAcHSVn23i04Fz5n6VqryaSu+OnI+jtbsorJ0JiY82C+rG/EnPPjBsS2VZa30l7T0V6zsePILkyEpMwP4PJ4opbShw/p0xlpMoHikivzxy0ztLUqIuYu34iEY5zDNTr2GH4zePUhygpJyQgkEof7rgB/l2GUcc4ePakY0b6pa6dPxQQtrgve3C/Uvzjz/UUun++I9PzHQxdwjk4cLs1L7etobkQZHGcPTxlhFPePZGUnSJp1HdSEk8xdyuKnsi8wMcU/Iv3TJR3NDdU4GZnxWWbbizJFdd5pDWEcpctR5ib53yHr9SwctOsxNspT+NV4v7ANFx1lPXrDjwtJrj4BkrhNX6+2mk3G/PlJ+5BwjHO4xuIXOcncUAZHWXJPQwC2oKtr5XWB2gw4Ur/VOafUoKxd7BOIUOEKJIPrlQeNnx764eFLWUKJzKfl6YPf+89fEYWEY5zDNeRBXtwDJBF7B/RDWbX5Fzro5HJkVYZOe9i1jTmFC22EBLBLOqWgfJfAWSTVKZsUzp69Ah1EYo/ulhaMLVOHRqlraqyG2PKF0FCdSQjLAohRwZoaCONOSyQJwoiFSxRYIVFyRKGpC/qGz14629UvKAEwCE/M6XhT97JdUV1lUL1V+Y1Mmqypr31y64t5Bw1tLUZNvQKFc8Revi6OMnfh+1uPLBR7+UXWXsv92VHaQ+rqGxgk6ukdjDwWo6GtvbaqoOzo3qPPT333ggBbBnDNfFZtE/mOTPIceyx/U9C4aeuEUpl/e01lUX1RQUGP0MiYF2ezT9/4NC0/In35MGd5T+9bK9O3wVqzvqXZaDUarEgwNkHZ0amrKyoCk1ISTJr2lkupfzkFRurlA2OHVOWc3A8HbZcEBI/0Gzl+Zmhqhr/61csHwG8is55PFFrR8PV7Bw/+/MtsBxfXUOWT4oNXP5m85eGeDYU1V87VAKK/J5L3loC3GsJnZabX3bpy9uHeTQ/wSoOSUv1j1+xIDJ40K8pqNmveVjxVq2tedsijYmy9Y0ckqaqe3wtJmTcSMMycOyV+D1SQm4pruWfcw6PbwMBJAWM+ngSyH72++UszAUdUYHoHjJ0ydM4znXLmo7fPgifOGgtz0UCDEOCBRo0+fCl7brnBlHKzqhR4Wpzc5HNhPjV62fptc5/pTekVJhsSjqOXb9iOa3Clc4C3GffgXpSBsmiZKDsadaFO1I02oC1oUyc8DMxcm8Ll8lxv/zNzJRTZRhq19XTJ0BXvWJPDsdksLr19wxVXc87oW5sxLmxhMxanArB24huOw9IWTcM1iD0d8P6Me2CvtXjXulxGHi3bhLpQJ+pGGxj46ExPoavE12LQ11VePNFM9EpWJktayh6pda1NL9C4h3s3/8bUNiG0Qew0JOZsFC/swb0AJSpGHlEROKgTdYMNPky28xgDdMo3pQAJ/tA/hbDQn8pav4RkL5FHr36AMPyhq7ePZjBH19xYzTZM19TAzPEoXtgDe8NQRhetOQd1om6woYyJLx7T6EHanwVsqQSQ3Dl8w76BdLZSHQb+Ri74PBnA0QCB/ZtXfEKyrG84lihO8c51P9CYxPRcquLd64+hUuQB3gm4B/o3Q9SiVcmkTNSBulAn6kYb6BBCmygmdyC/kKnp8TOKlXcgiC0pNypz+s1ckobBCnGTjEE84dzdm5DyWRCohqSfin7FAEeC8jMfWqDdSDhm5pEHeXEP7gUZSpSFMlE26kBdoPMu6kYbaFtEXKIkUJABqC5KPHkjHU67gCdwkEJ3Wgqg+gqEJwF07Hz09ZdlCQfOjfX9YNzE2xuXris/8W0l09SS9RcayCDwxhYA2HMAO5cHZq4Jh2xd0fzoTi6AbQB0uRFwAyoo+N/lTR/xPVSHDrKr5RL3TT46RNKgUI+Yv2+b4B4RPQbioz/GCQjSQxzUAIi+cQ8fGG9QtdaVnzx4wmY2WyFLNVQX4iYXcwUCHhiW5ih184GkKXRyl/eEmukPB3XCROhQNj6F/u7yva9WXQCMayEMMjBlqat3oJC+XglNrqlFit0AjkLoOp9AS+0PWecpcBF7QD/vZK9IQlzpzVqN0tiuaoJqUAPdcKTNajWcivfNIuqkmjbMSDxqLAI6Ky2sVwuPKejQKTiBF/q8KS46/cvMUSfIKxtzND+t97ARsxQ38k7XFlwsx0m/hAlhviMSUxp+v3Hs8uwP/49/7PFr03sOipsGMk1GdZueqI962ihGv43HwiymdTYwG+CFJMPOFAp4BX06FU3qgkUTj2sbX5d4xyeMh67BZtJqbDjGufyMpB/Y/PDse46yoB6LCB3M9ZlJbOOxHp82AgApIz0iB1NdJ7Q8DTRiM0GqgxTXQWBvA3BUx23clxm/+ZtMHFNzRoOOza9vVaIMjnzAUAn76gj9dnv+TgO5PD715oOs0RKIbaGFmiCIW0sObj/gIJZ4IOEY51gPYWoPyNBRlUEs4bPRv7s9P7PBqm1QoBKOxC/Ig04Q8jFigRbIa8Anq5dY9DqKD8fQ/rx+emRXC6s75tEyOLRMK9lJdPeV1FknS77dVg3Z1SYfEBtHwgqkvhCCeVLMqq3/sVnM2qK1i1cUrlmUBWPNkJX/3oNryEO2zh5RQ4ejLJBZxbrCbnmMTASzSdtu0NYrzgMozgBlNVCIK9z6DQj2iBryMYBxCAR63lV4nQNeUc8pVeWz9FEHzq3sFfP+F2n3myYrS+6faX32+KV7/0Eh4LGp7a9fHQeZTLC/8zrtfbtwYL7YyIL7uY3JvrLVWd4rkfkgYlS9vVt/+9qh68tSi4iM6vwY88Gek3FecaMyhNIescweKPh5+YuSV8PhlGTr09W3C66ddyX5SYnqcqEI+8mCwz0V1/Nq4d3YQgS4mfW1h+kg8N3p7vPXj/wA4ZvgCmuJHs9A7LX9EcPYb0zyicUhIMXUlceIL4l8IqHITwx2r5LfnecXK+7I7xFGAo/MREBbWIaTfORB3gkX3THMShhFKjN1cWobq7SZCTLZA9Q/YxjbaxbWr81OZlu74LV2R+F/BRgA2E9xgXp3xzgAAAAASUVORK5CYII="
+  module.exports = "data:image/png;base64,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";;
 
 /***/ },
 /* 108 */
@@ -5881,9 +5735,7 @@ module.exports =
   var _default = (0, _withStyles2.default)(_Feedback2.default)(Feedback);
   
   exports.default = _default;
-  ;
-  
-  (function () {
+      (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -5892,9 +5744,8 @@ module.exports =
   
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/components/Feedback/Feedback.js');
   })();
-
-  ;
-  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+    
+  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)));;
 
 /***/ },
 /* 109 */
@@ -6034,9 +5885,7 @@ module.exports =
   var _default = (0, _withStyles2.default)(_Footer2.default)(Footer);
   
   exports.default = _default;
-  ;
-  
-  (function () {
+      (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -6045,9 +5894,8 @@ module.exports =
   
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/components/Footer/Footer.js');
   })();
-
-  ;
-  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+    
+  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)));;
 
 /***/ },
 /* 112 */
@@ -6170,9 +6018,7 @@ module.exports =
   
     throw new Error(methodName + ' is not an action of ' + className);
   }
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -6186,9 +6032,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(dispatch, 'dispatch', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/core/dispatch.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 116 */
 /***/ function(module, exports) {
 
@@ -6344,9 +6188,7 @@ module.exports =
   var _default = (0, _withStyles2.default)(_appBar2.default)(AppBar);
   
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -6358,9 +6200,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/components/AppBar.jsx');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -6405,9 +6245,7 @@ module.exports =
   
   var _default = MenuLinksSX;
   exports.default = _default;
-  ;
-  
-  (function () {
+      (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -6416,9 +6254,8 @@ module.exports =
   
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/components/MenuLinksSX.jsx');
   })();
-
-  ;
-  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+    
+  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)));;
 
 /***/ },
 /* 123 */
@@ -6503,9 +6340,7 @@ module.exports =
   var _default = (0, _withStyles2.default)(_Navigation2.default)(Navigation);
   
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -6515,9 +6350,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/components/Navigation/Navigation.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 124 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -6695,9 +6528,7 @@ module.exports =
   }, _temp2);
   var _default = Link;
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -6711,9 +6542,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/components/Linkmaterial.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 127 */
 /***/ function(module, exports) {
 
@@ -6873,9 +6702,7 @@ module.exports =
   
   var _default = MenuLinksDX;
   exports.default = _default;
-  ;
-  
-  (function () {
+      (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -6900,9 +6727,8 @@ module.exports =
   
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/components/MenuLinksDX.jsx');
   })();
-
-  ;
-  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+    
+  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)));;
 
 /***/ },
 /* 129 */
@@ -7092,9 +6918,7 @@ module.exports =
   var _default = (0, _withStyles2.default)(_appNav2.default)(AppNav);
   
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -7108,9 +6932,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/components/AppNav.jsx');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 134 */
 /***/ function(module, exports) {
 
@@ -7316,9 +7138,7 @@ module.exports =
   
   var _default = AuthModal2;
   exports.default = _default;
-  ;
-  
-  (function () {
+      (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -7339,9 +7159,8 @@ module.exports =
   
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/components/AuthModal.jsx');
   })();
-
-  ;
-  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+    
+  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)));;
 
 /***/ },
 /* 138 */
@@ -7480,9 +7299,7 @@ module.exports =
   
   var _default = AuthModal;
   exports.default = _default;
-  ;
-  
-  (function () {
+      (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -7493,9 +7310,8 @@ module.exports =
   
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/components/AuthFormLogin.jsx');
   })();
-
-  ;
-  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+    
+  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)));;
 
 /***/ },
 /* 141 */
@@ -7634,9 +7450,7 @@ module.exports =
   
   var _default = AuthModal;
   exports.default = _default;
-  ;
-  
-  (function () {
+      (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -7647,9 +7461,8 @@ module.exports =
   
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/components/AuthFormRegister.jsx');
   })();
-
-  ;
-  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+    
+  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)));;
 
 /***/ },
 /* 142 */
@@ -7680,9 +7493,7 @@ module.exports =
     react-modal global style
   */
   exports.default = _default;
-  ;
-
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -7690,9 +7501,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/styles/_.modal.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 143 */
 /***/ function(module, exports) {
 
@@ -7784,9 +7593,7 @@ module.exports =
   });
   
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -7796,9 +7603,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/components/forms/auth.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 145 */
 /***/ function(module, exports) {
 
@@ -7829,9 +7634,7 @@ module.exports =
     }
   };
   exports.default = _default;
-  ;
-
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -7839,9 +7642,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/shared/schemas/auth.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 147 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -7930,9 +7731,7 @@ module.exports =
   });
   
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -7942,9 +7741,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/components/forms/user.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 148 */
 /***/ function(module, exports) {
 
@@ -7974,9 +7771,7 @@ module.exports =
     }
   };
   exports.default = _default;
-  ;
-
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -7984,9 +7779,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/shared/schemas/user.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -8093,9 +7886,7 @@ module.exports =
   });
   
   exports.default = _default;
-  ;
-
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -8103,9 +7894,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/store/stores.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 153 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -8271,9 +8060,7 @@ module.exports =
   var _default = new Store();
   
   exports.default = _default;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -8283,9 +8070,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/store/store.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 154 */
 /***/ function(module, exports) {
 
@@ -8491,9 +8276,7 @@ module.exports =
     }
   })), _class2)) || _class) || _class);
   exports.default = UIStore;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -8501,9 +8284,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(UIStore, 'UIStore', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/store/stores/ui.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 157 */
 /***/ function(module, exports) {
 
@@ -8526,17 +8307,13 @@ module.exports =
   
   exports.extend = _extend.extend;
   exports.toggle = _toggle.toggle;
-  ;
-
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-      return;
+      
     }
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -8562,9 +8339,7 @@ module.exports =
       });
     };
   }
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -8572,9 +8347,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(extend, "extend", "/Users/simon/skiscool_backend/skiscool/react-start-kit/src/core/decorators/extend.js");
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -8613,9 +8386,7 @@ module.exports =
       })), _Object$assign5));
     };
   }
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -8623,9 +8394,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(toggle, 'toggle', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/core/decorators/toggle.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 161 */
 /***/ function(module, exports) {
 
@@ -8831,9 +8600,7 @@ module.exports =
     }
   })), _class2)) || _class);
   exports.default = Theme;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -8849,9 +8616,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(Theme, 'Theme', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/store/stores/ui/Theme.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 163 */
 /***/ function(module, exports) {
 
@@ -8900,9 +8665,7 @@ module.exports =
      },*/
   };
   exports.default = _default;
-  ;
-
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -8910,9 +8673,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/styles/_.material.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 167 */
 /***/ function(module, exports) {
 
@@ -8999,9 +8760,7 @@ module.exports =
     }
   })), _class2)) || _class);
   exports.default = AppBar;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -9009,9 +8768,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(AppBar, 'AppBar', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/store/stores/ui/AppBar.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -9099,9 +8856,7 @@ module.exports =
     }
   })), _class2)) || _class) || _class);
   exports.default = AppNav;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -9109,9 +8864,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(AppNav, 'AppNav', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/store/stores/ui/AppNav.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -9229,9 +8982,7 @@ module.exports =
     }
   }), _applyDecoratedDescriptor(_class.prototype, 'open', [_mobx.action], (0, _getOwnPropertyDescriptor2.default)(_class.prototype, 'open'), _class.prototype), _applyDecoratedDescriptor(_class.prototype, 'close', [_mobx.action], (0, _getOwnPropertyDescriptor2.default)(_class.prototype, 'close'), _class.prototype)), _class);
   exports.default = SnackBar;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -9239,9 +8990,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(SnackBar, 'SnackBar', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/store/stores/ui/SnackBar.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -9359,9 +9108,7 @@ module.exports =
     }
   }), _applyDecoratedDescriptor(_class.prototype, 'toggle', [_mobx.action], (0, _getOwnPropertyDescriptor2.default)(_class.prototype, 'toggle'), _class.prototype), _applyDecoratedDescriptor(_class.prototype, 'toggleSection', [_mobx.action], (0, _getOwnPropertyDescriptor2.default)(_class.prototype, 'toggleSection'), _class.prototype)), _class);
   exports.default = AuthModal;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -9369,9 +9116,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(AuthModal, 'AuthModal', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/store/stores/ui/AuthModal.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -9452,9 +9197,7 @@ module.exports =
     }
   })), _class2)) || _class);
   exports.default = PostCreateModal;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -9462,9 +9205,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(PostCreateModal, 'PostCreateModal', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/store/stores/ui/PostCreateModal.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -9487,9 +9228,7 @@ module.exports =
   };
   
   exports.default = AppStore;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -9497,9 +9236,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(AppStore, "AppStore", "/Users/simon/skiscool_backend/skiscool/react-start-kit/src/store/stores/app.js");
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -9663,9 +9400,7 @@ module.exports =
     }
   }), _applyDecoratedDescriptor(_class.prototype, 'updateUser', [_mobx.action], (0, _getOwnPropertyDescriptor2.default)(_class.prototype, 'updateUser'), _class.prototype), _applyDecoratedDescriptor(_class.prototype, 'check', [_mobx.computed], (0, _getOwnPropertyDescriptor2.default)(_class.prototype, 'check'), _class.prototype), _applyDecoratedDescriptor(_class.prototype, 'login', [_mobx.action], (0, _getOwnPropertyDescriptor2.default)(_class.prototype, 'login'), _class.prototype), _applyDecoratedDescriptor(_class.prototype, 'register', [_mobx.action], (0, _getOwnPropertyDescriptor2.default)(_class.prototype, 'register'), _class.prototype), _applyDecoratedDescriptor(_class.prototype, 'logout', [_mobx.action], (0, _getOwnPropertyDescriptor2.default)(_class.prototype, 'logout'), _class.prototype)), _class);
   exports.default = AuthStore;
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -9673,9 +9408,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(AuthStore, 'AuthStore', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/store/stores/auth.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -9731,9 +9464,7 @@ module.exports =
   function service(name) {
     return app().service(name);
   }
-  ;
-  
-  (function () {
+    (function () {
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     }
@@ -9749,9 +9480,7 @@ module.exports =
     __REACT_HOT_LOADER__.register(service, 'service', '/Users/simon/skiscool_backend/skiscool/react-start-kit/src/shared/app.js');
   })();
 
-  ;
-
-/***/ },
+    /***/ },
 /* 176 */
 /***/ function(module, exports) {
 

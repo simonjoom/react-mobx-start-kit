@@ -28,7 +28,7 @@ export default class AuthStore {
       .authenticate({ type: 'token', token })
       .then((result) => this.updateUser(result.data))
       .catch((err) => {
-      console.error('errorauth')
+      console.error('errorauth');;
       console.error(err)}
       ); // eslint-disable-line no-console
   }

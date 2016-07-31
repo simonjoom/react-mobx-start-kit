@@ -34,8 +34,6 @@ var _default = function _default() {
 };
 
 exports.default = _default;
-;
-
 (function () {
   if (typeof __REACT_HOT_LOADER__ === 'undefined') {
     return;
@@ -44,4 +42,3 @@ exports.default = _default;
   __REACT_HOT_LOADER__.register(_default, 'default', 'api/middleware/api/after.js');
 })();
 
-;

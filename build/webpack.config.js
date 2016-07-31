@@ -11,12 +11,12 @@ import config from '../src/config'
 import _debug from 'debug'
 var HappyPack = require('happypack');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
-const debug = _debug('app:webpack:config')
+const debug = _debug('app:webpack:config');;
 
 const VERBOSE = process.argv.includes('--verbose');
 
-const paths = config.utils_paths
-const {__DEV__, __PROD__, __TEST__} = config.globals
+const paths = config.utils_paths;;
+const {__DEV__, __PROD__, __TEST__} = config.globals;;
 const __DEBUG = true;
 const AUTOPREFIXER_BROWSERS = [
     'Android 2.3',
@@ -41,9 +41,9 @@ const exposevar = {
             'IO_PORT': JSON.stringify(process.env['IO_PORT'])
         }
     }
-}
-console.log(exposevar)
-debug('Create configuration.')
+};;
+console.log(exposevar);;
+debug('Create configuration.');;
 const webpackConfig = {
 // name: 'app',
     plugins: [],
@@ -114,7 +114,7 @@ const webpackConfig = {
             ],
         };
     }
-}
+};;
 
 
 // Don't split bundles during testing, since we only want import one bundle
@@ -194,7 +194,7 @@ webpackConfig.module.loaders = [{
         test: /\.json$/,
         loader: 'json-loader',
     }
-]
+];;
 
 // ------------------------------------
 // Style Loaders
@@ -318,7 +318,7 @@ webpackConfig.module.loaders.push(
     {test: /\.eot(\?.*)?$/, loader: 'file?prefix=fonts/&name=[path][name].[ext]'},
     {test: /\.svg(\?.*)?$/, loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=image/svg+xml'},
     {test: /\.(png|jpg)$/, loader: 'url?limit=8192'}
-)
+);;
 /* eslint-enable */
 /*
  webpackConfig.plugins.push(
@@ -341,15 +341,15 @@ webpackConfig.module.loaders.push(
 // need to use the extractTextPlugin to fix this issue:
 // http://stackoverflow.com/questions/34133808/webpack-ots-parsing-error-loading-fonts/34133809#34133809
 if (!__DEV__) {
-    debug('Apply ExtractTextPlugin to CSS loaders.')
+    debug('Apply ExtractTextPlugin to CSS loaders.');;
     webpackConfig.module.loaders.filter((loader) =>
         loader.loaders && loader.loaders.find((name) => /css/.test(name.split('?')[0]))
     ).forEach((loader) => {
-        const [first, ...rest] = loader.loaders
-        console.log(first, rest.join('!'))
-        loader.loader = ExtractTextPlugin.extract(first, rest.join('!'))
+        const [first, ...rest] = loader.loaders;;
+        console.log(first, rest.join('!'));;
+        loader.loader = ExtractTextPlugin.extract(first, rest.join('!'));;
         Reflect.deleteProperty(loader, 'loaders')
-    })
+    });;
 
     webpackConfig.plugins.push(
         new ExtractTextPlugin('[name].[contenthash].css', {
@@ -397,7 +397,7 @@ const clientConfig = extend(true, {}, webpackConfig, {
 // ------------------------------------
 const APP_ENTRY_PATHS = [
     paths.client('main.js')
-]
+];;
 
 clientConfig.entry = {
     app: __DEV__
@@ -409,11 +409,11 @@ clientConfig.entry = {
     ].concat(APP_ENTRY_PATHS)
         : APP_ENTRY_PATHS
     , vendor: config.compiler_vendor
-}
+};;
 
 
 if (__DEV__) {
-    debug('Enable plugins for live development (HMR, NoErrors).')
+    debug('Enable plugins for live development (HMR, NoErrors).');;
     /*clientConfig.plugins.push(
      new webpack.optimize.CommonsChunkPlugin({
      names: ['vendor']
@@ -433,8 +433,8 @@ if (__DEV__) {
         new webpack.optimize.CommonsChunkPlugin({
             names: ['vendor']
         })
-    )
-    debug('Enable plugins for production (OccurenceOrder, Dedupe & UglifyJS).')
+    );;
+    debug('Enable plugins for production (OccurenceOrder, Dedupe & UglifyJS).');;
     clientConfig.plugins.push(
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
@@ -517,10 +517,10 @@ const serverConfig = extend(true, {}, webpackConfig, {
 
 const SERVER_ENTRY_PATHS = [
     paths.client('server.js')
-]
+];;
 
 serverConfig.entry = {
     server: SERVER_ENTRY_PATHS
-}
+};;
 export default [clientConfig, serverConfig];
 

@@ -8,7 +8,7 @@ export default function () {
   const app = this;
 app.use(cors({credentials: true,allowedOrigins: [
         'http://localhost:8080', 'http://localhost:3000', 'http://localhost:8000'
-    ]}))
+    ]}));;
  // app.use(cors({ origin: true }));
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: true }));

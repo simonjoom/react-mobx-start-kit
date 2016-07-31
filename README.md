@@ -15,7 +15,6 @@ https://github.com/foxhound87/rfx-stack
 
 https://github.com/gaearon/react-hot-loader
 
-
 We stopped redux for mobx, not only for performance but Mobx is much simpler and easy to use. Thanks for rfx-stack to help us in this way;
 
 We do not use react-router that everybody use, just because universal-router is more simple and we prefer to know how it's working under the hood
@@ -34,7 +33,6 @@ CopyWebpackPlugin: It was big help too to integrate our asset in memory (we use 
 https://www.npmjs.com/package/copy-webpack-plugin
 
 HappyPack We use it but just it's desactivate due side effect on big change but it's compile faster!
-
 
 Finally, This project wouldn't be possible without the help of our many contributors, so [thank you](#thank-you) for all of your help.
 

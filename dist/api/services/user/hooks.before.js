@@ -22,8 +22,6 @@ var _default = {
   remove: [_feathersAuthentication.hooks.verifyToken(), _feathersAuthentication.hooks.populateUser(), _feathersAuthentication.hooks.restrictToAuthenticated(), _feathersAuthentication.hooks.restrictToOwner({ ownerField: '_id' })]
 };
 exports.default = _default;
-;
-
 (function () {
   if (typeof __REACT_HOT_LOADER__ === 'undefined') {
     return;
@@ -32,4 +30,3 @@ exports.default = _default;
   __REACT_HOT_LOADER__.register(_default, 'default', 'api/services/user/hooks.before.js');
 })();
 
-;
