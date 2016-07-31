@@ -47,8 +47,4 @@
     <option name="SEND_ENVIRONMENT_VARIABLES_TO_SERVER" value="false" />
     <option name="SHOW_PATH" value="true" />
   </component>
-  <component name="NodeJsLocalInterpreters">
-    <local-interpreter path="/usr/local/bin/node" excluded="true" />
-    <local-interpreter path="/usr/local/Cellar/node/6.1.0/bin/node" excluded="true" />
-  </component>
 </application>
