@@ -1,9 +1,28 @@
 # React Mobx Starter Kit
 
 This starter kit is designed to get you up and running with a bunch of awesome new front-end technologies, all on top of a configurable,
-feature-rich webpack build system that's already setup to provide hot reloading, CSS modules with Sass support, unit testing, code coverage reports, bundle splitting, and a whole lot more.
 
-The primary goal of this project is to remain as **unopinionated** as possible. Its purpose is not to dictate your project structure or to demonstrate a complete sample application, but to provide a set of tools intended to make front-end development robust, easy, and, most importantly, fun. Check out the full feature list below!
+This kit is actually working in developpement mode only .. why? because just i'm lazy and i still not checked webpack config for production...
+So it's a boilerplate to start happy developping : We use last react-hot-loader! 
+
+In building this,  The more important thing for us was to have a good SSR (server side rendering) with not too much complicate code
+SO we decided to merge 4 important features
+
+https://github.com/kriasoft/universal-router
+https://github.com/kriasoft/react-starter-kit
+https://github.com/foxhound87/rfx-stack
+https://github.com/gaearon/react-hot-loader
+
+
+We stopped redux for mobx, not only for performance but Mobx is much simpler and easy to use. Thanks for rfx-stack to help us in this way;
+
+We do not use react-router that everybody use, just because universal-router is more simple and we prefer to know how it's working under the hood
+ 
+Our webpack build system is setup with the last hot reloading, CSS modules with Sass support, unit testing, code coverage reports, bundle splitting, and a whole lot more.
+
+The primary goal of this project is to remain as **unopinionated** as possible. 
+Its purpose is not to dictate your project structure or to demonstrate a complete sample application, but to provide a set of tools intended to make front-end development robust, easy, and, most importantly, fun. Check out the full feature list below!
+
 
 Finally, This project wouldn't be possible without the help of our many contributors, so [thank you](#thank-you) for all of your help.
 
