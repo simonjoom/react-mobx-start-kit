@@ -24,7 +24,7 @@ Our webpack build system is setup with the last hot reloading, CSS modules with 
 The primary goal of this project is to remain as **unopinionated** as possible. 
 Its purpose is not to dictate your project structure or to demonstrate a complete sample application, but to provide a set of tools intended to make front-end development robust, easy, and, most importantly, fun. Check out the full feature list below!
 
-For information thks to some of these npm to help configurate webpack 
+These npm helped us to configurate webpack with react-hot-loader 
 
 font-awesome managed by font-awesome-webpack ! thks to him to help to add font-awesome
 https://www.npmjs.com/package/font-awesome-webpack
@@ -32,7 +32,7 @@ https://www.npmjs.com/package/font-awesome-webpack
 CopyWebpackPlugin: It was big help too to integrate our asset in memory (we use webpack for hot-reload so asset should to added in memory)
 https://www.npmjs.com/package/copy-webpack-plugin
 
-HappyPack We use it but just it's desactivate due side effect on big change but it's compile much faster!
+HappyPack: We use it but just it's desactivate due side effect on big change but it's compile much faster!
 
 
 Finally, This project wouldn't be possible without the help of our many contributors, so [thank you](#thank-you) for all of your help.
@@ -246,7 +246,14 @@ In production, webpack will extract styles to a `.css` file, minify your JavaScr
 
 ## Learning Resources
 
-* [Starting out with react-redux-starter-kit](https://suspicious.website/2016/04/29/starting-out-with-react-redux-starter-kit/) is an introduction to the components used in this starter kit with a small example in the end.
+* [Starting out with mobx](https://mobxjs.github.io/mobx/getting-started.html) is an introduction to the components used in this starter kit with a small example in the end.
+
+Just some simple, declarative components that form our complete UI. And which are derived completely, reactively from our state. You are now ready to start using the mobx and mobx-react packages in your own applications. A short summary of the things you learned so far:
+
+    Use the @observable decorator or observable(object or array) functions to make objects trackable for MobX.
+    The @computed decorator can be used to create functions that can automatically derive their value from the state.
+    Use autorun to automatically run functions that depend on some observable state. This is useful for logging, making network requests etc.
+    Use the @observer decorator from the mobx-react package to make your React components truly reactive. They will update automatically and efficiently. Even when used in large complex applications with large amounts of data.
 
 ## FAQ
 
