@@ -7,13 +7,14 @@ In building this,  The more important thing for us was to have a good SSR (serve
 
 We decided to merge 4 important features
 
-https://github.com/kriasoft/universal-router
+* [No react-router better then](https://github.com/kriasoft/universal-router)   ->https://github.com/kriasoft/universal-router
 
-https://github.com/kriasoft/react-starter-kit
+* [Boilerplate SSR-nice](https://github.com/kriasoft/react-starter-kit)         ->https://github.com/kriasoft/react-starter-kit
 
-https://github.com/foxhound87/rfx-stack
+* [Store Mobx](https://github.com/foxhound87/rfx-stack)                         ->https://github.com/foxhound87/rfx-stack
 
-https://github.com/gaearon/react-hot-loader
+* [Last Hot Loader for development use](https://github.com/gaearon/react-hot-loader) ->https://github.com/gaearon/react-hot-loader
+
 
 We stopped redux for mobx, not only for performance but Mobx is much simpler and easy to use. Thanks for rfx-stack to help us in this way;
 
