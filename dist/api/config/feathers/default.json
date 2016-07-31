@@ -1,0 +1,25 @@
+{
+  "server": {
+    "db": {
+      "host": "localhost",
+      "name": "mongodb",
+      "port": "27017"
+    },
+    "web": {
+      "host": "localhost",
+      "port": "3001"
+    },
+    "api": {
+      "host": "localhost",
+      "port": "3030"
+    }
+  },
+  "auth": {
+    "idField": "uuid",
+    "userEndpoint": "/user",
+    "token": {
+      "secret": "JNoSF4uRkGB1zhccVkpX3ulB/1KErbj/tuhCTY0dkpVNyYTU8bJiNC4ErCUK4sDSe/YMjuC0kqtlYnWuK8tHsQ=="
+    },
+    "local": {}
+  }
+}
