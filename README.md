@@ -15,7 +15,6 @@ https://github.com/foxhound87/rfx-stack
 
 https://github.com/gaearon/react-hot-loader
 
-
 We stopped redux for mobx, not only for performance but Mobx is much simpler and easy to use. Thanks for rfx-stack to help us in this way;
 
 We do not use react-router that everybody use, just because universal-router is more simple and we prefer to know how it's working under the hood
