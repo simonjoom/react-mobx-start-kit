@@ -7,3 +7,15 @@ coverage
 blueprints
 assets
 tests
+/databaseDrivers.xml
+.idea/
+/databaseSettings.xml
+/github_settings.xml
+/debugger.xml
+/diff.xml
+/IntelliLang.xml
+/web-browsers.xml
+/other.xml
+/multimarkdown.shared.xml
+/markdown_navigator.shared.xml
+/ui.lnf.xml
