@@ -250,10 +250,17 @@ In production, webpack will extract styles to a `.css` file, minify your JavaScr
 
 Just some simple, declarative components that form our complete UI. And which are derived completely, reactively from our state. You are now ready to start using the mobx and mobx-react packages in your own applications. A short summary of the things you learned so far:
 
-    Use the @observable decorator or observable(object or array) functions to make objects trackable for MobX.
-    The @computed decorator can be used to create functions that can automatically derive their value from the state.
-    Use autorun to automatically run functions that depend on some observable state. This is useful for logging, making network requests etc.
-    Use the @observer decorator from the mobx-react package to make your React components truly reactive. They will update automatically and efficiently. Even when used in large complex applications with large amounts of data.
+    Use the @observable decorator or observable(object or array) 
+    functions to make objects trackable for MobX.
+    
+    The @computed decorator can be used to create functions 
+    that can automatically derive their value from the state.
+    
+    Use autorun to automatically run functions that depend on some observable state.
+    This is useful for logging, making network requests etc.
+    
+    Use the @observer decorator from the mobx-react package to make your React components truly reactive.
+    They will update automatically and efficiently. Even when used in large complex applications with large amounts of data.
 
 ## FAQ
 
