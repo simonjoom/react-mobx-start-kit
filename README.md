@@ -81,11 +81,12 @@ While developing, you will probably rely mostly on `npm start`; however, there a
 
 The application structure presented in this boilerplate is **fractal**, where functionality is grouped primarily by feature rather than file type. Please note, however, that this structure is only meant to serve as a guide, it is by no means prescriptive. That said, it aims to represent generally accepted guidelines and patterns for building scalable applications. If you wish to read more about this pattern, please check out this [awesome writeup](https://github.com/davezuko/react-redux-starter-kit/wiki/Fractal-Project-Structure) by [Justin Greenberg](https://github.com/justingreenberg).
 
+Here Main files and directories:
 ```
 .
 ├── bin                      # Build/Start scripts
 ├── build                    # All build-related configuration
-│   └── webpack              # Environment-specific configuration files for webpack
+│   └── webpack.config.js    # Environment-specific configuration files for webpack
 ├── config                   # Project configuration settings
 ├── server                   # express application 
 │   └── main.js              # Server application entry point
@@ -96,7 +97,7 @@ The application structure presented in this boilerplate is **fractal**, where fu
 │   ├── layouts              # Components that dictate major page structure
 │   ├── static               # Static assets (not imported anywhere in source code)
 │   ├── styles               # Application-wide styles (generally settings)
-│   ├── store                # Redux-specific pieces
+│   ├── store                # Mobx store 
 │   │   ├── store.js         # Create and instrument mobx store
 │   │   └── store 
                ├ ui/auth/post #Injection store subclass
