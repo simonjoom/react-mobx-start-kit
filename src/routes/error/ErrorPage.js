@@ -1,7 +1,6 @@
-
 import { PropTypes } from 'react';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './ErrorPage.css';
+//import withStyles from 'isomorphic-style-loader/lib/withStyles';
+//import Errorstyle from './ErrorPage.css';
 
 export function ErrorPage({ error }, context) {
   let title = 'Error';
@@ -31,4 +30,4 @@ export function ErrorPage({ error }, context) {
 ErrorPage.propTypes = { error: PropTypes.object.isRequired };
 ErrorPage.contextTypes = { setTitle: PropTypes.func.isRequired };
 
-export default withStyles(s)(ErrorPage);
+export default  ErrorPage;

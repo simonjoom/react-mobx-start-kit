@@ -38,11 +38,11 @@ import {match} from 'universal-router';
 //import withContext from './withContext';
 var proxy = require('http-proxy-middleware');
 const debug = _debug('app:server')
-
+import { getStyles } from 'simple-universal-style-loader'
 
 const app = express();
 
-
+console.log(process.env);
 const port = process.env.PORT || 3000;
 
 //if(__DEV__){
@@ -72,7 +72,7 @@ app.use(bodyParser.json());
 
 
 app.use('/assets/*', proxy({
-        target: 'http://localhost:8000', changeOrigin: true
+        target: 'http://localhost:'+process.env['IO_PORT'], changeOrigin: true
     }
 ));
 
@@ -151,6 +151,34 @@ function render(template, component, context, actionResult, store, appstate) {
             })
         )}`;
 }
+
+/*
+const fixLocalAsset = assets => (
+  (Array.isArray(assets) ? assets : [assets]).map(asset => `/${asset}`)
+)
+
+const getAssets = (localAssets = []) => (
+  Array.concat(
+// layout.script.map(item => item.src),
+// layout.link.map(item => item.href),
+    localAssets.map(asset => fixLocalAsset(asset))
+  )
+)
+
+
+const getAssetsByExtension = (extension, localAssets = []) => (
+  getAssets(localAssets).filter(asset => new RegExp('.(' + extension + ')$').test(asset))
+)
+
+const getScripts = (localAssets = []) => (
+  getAssetsByExtension('js', localAssets)
+)
+
+const getStyles = (localAssets = []) => (
+  getAssetsByExtension('css', localAssets)
+)
+*/
+
 function createApp({routes, context, template, storetostore, store} = {}) {
     return async(req, res, next) => {
         let result;
@@ -244,7 +272,9 @@ function initapp() {
 //console.log(storetostore)
                 context = {
                     ...data,
-                    insertCss: styles => css.push(styles._getCss()),
+                    style: getStyles().map(style => (style.parts.map(part => `${part.css}\n`).join('\n'))),
+                   // insertCss: styles => css.push(styles._getCss()),
+
                     /* insertCss: (...styles) => {
                      styles.forEach(style => css.push(style._getCss()));
                      },*/

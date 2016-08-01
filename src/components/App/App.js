@@ -38,7 +38,7 @@ const handleThemeToggle = () => {
 class App extends Component {
     static propTypes = {
         context: PropTypes.shape({
-            insertCss: PropTypes.func,
+        //    insertCss: PropTypes.func,
             setTitle: PropTypes.func,
             setMeta: PropTypes.func,
             muiTheme: PropTypes.object.isRequired
@@ -50,11 +50,11 @@ class App extends Component {
 
     constructor(props) {
         super(props)
-        this.props.context.styles = s;
+       // this.props.context.styles = s;
     }
 
     static childContextTypes = {
-        insertCss: PropTypes.func.isRequired,
+    //    insertCss: PropTypes.func.isRequired,
         setTitle: PropTypes.func.isRequired,
         setMeta: PropTypes.func.isRequired,
         muiTheme: PropTypes.object.isRequired
@@ -63,7 +63,7 @@ class App extends Component {
     getChildContext() {
         const context = this.props.context;
         return {
-            insertCss: context.insertCss || emptyFunction,
+         //   insertCss: context.insertCss || emptyFunction,
             setTitle: context.setTitle || emptyFunction,
             setMeta: context.setMeta || emptyFunction,
             muiTheme: this.props.appstate.ui.theme.getMui()
@@ -71,14 +71,14 @@ class App extends Component {
     }
 
     componentWillMount() {
-        const {insertCss} = this.props.context;
-        this.removeCss = insertCss(s);
+    //    const {insertCss} = this.props.context;
+    //    this.removeCss = insertCss(s);
         //  this.removeCss2 = insertCss(styles);
     }
 
     componentWillUnmount() {
         console.log('demonte')
-        this.removeCss();
+     //   this.removeCss();
         // this.removeCss2();
     }
 
@@ -100,7 +100,7 @@ class App extends Component {
                 { isDev ? <DevTools position={{ bottom: 0, right: '20px' }}/> : null }
 
                 <Paper zDepth={1}
-                       className={cx({ [styles.su]: ui.layoutIsShifted },{[s.m0]:breakpoints.xs,[s.m1]:breakpoints.su,[s.m2]:breakpoints.mu})}>
+                       className={cx({ [styles.su]: ui.layoutIsShifted },{'m0':breakpoints.xs,'m1':breakpoints.su,'m2':breakpoints.mu})}>
                     <Toggle
                         label="Toggle Theme"
                         defaultToggled={ui.theme.toggleThemestate}
@@ -109,8 +109,7 @@ class App extends Component {
                     <AppBar accountMenuIsOpen={ui.appBar.accountMenuIsOpen}
                             layoutIsShifted={ui.layoutIsShifted}
                             authCheck={auth.check}
-                            user={auth.user}
-                            s={this.props.context.styles}/>
+                            user={auth.user} />
                     <div className={styles.content}>
                         {this.props.children}
                     </div>
@@ -118,7 +117,7 @@ class App extends Component {
 
 
                 <Paper zDepth={1}
-                       className={cx({ [styles.su]: ui.layoutIsShifted },{[s.m0]:breakpoints.xs,[s.m1]:breakpoints.su,[s.m2]:breakpoints.mu})}>
+                       className={cx({ [styles.su]: ui.layoutIsShifted },{'m0':breakpoints.xs,'m1':breakpoints.su,'m2':breakpoints.mu})}>
                     <Feedback />
 
                 </Paper>
@@ -130,7 +129,6 @@ class App extends Component {
                     onRequestClose={() => ui.snackBar.close()}
                 />
                 <AuthModal
-                    s={this.props.context.styles}
                     open={ui.authModal.isOpen}
                     showSection={ui.authModal.showSection}
                     forms={{

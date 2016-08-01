@@ -3,7 +3,7 @@ import dispatch from '~/src/core/dispatch';
 import cx from 'classnames';
 import {observer} from "mobx-react";
 
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
+//import withStyles from 'isomorphic-style-loader/lib/withStyles';
 // components
 import MenuLinksSX from './MenuLinksSX';
 import MenuLinksDX from './MenuLinksDX';
@@ -17,41 +17,40 @@ const handleNavToggle = (e) => {
     dispatch('ui.appNav.open');
 };
 
-function AppBar({authCheck, user, accountMenuIsOpen, layoutIsShifted, s}) {
-    const button = cx(s.btn, s['inline-block'], s.py2, s.m0);
-    const appBar = cx(s.clearfix, s.right, s.animated, s.fadeIn);
+function AppBar({authCheck, user, accountMenuIsOpen, layoutIsShifted}) {
+    const button = cx('btn', 'inline-block', 'py2', 'm0');
+    const appBar = cx('clearfix', 'right', 'animated', 'fadeIn');
     return (
         <div className={cx(styles.bar, appBar, {
     [styles.leftShifted]: layoutIsShifted,
     'left-0': !layoutIsShifted,
   })}
         >
-            <div className={cx(s['left'],s['lg-hide'])}>
+            <div className={cx('left','lg-hide')}>
                 <a onClick={handleNavToggle} className={button}>
                     <i className="fa fa-bars"/>
                 </a>
                 <MenuLinksSX inline styles/>
             </div>
-            <div className={cx(s['left'],s['lg-show'])}>
+            <div className={cx('left','lg-show')}>
                 <a onClick={handleNavToggle} className={button}>
                     <i className="fa fa-bars fa-2x"/>
                 </a>
                 <MenuLinksSX styles/>
             </div>
-            <div className="right md-show">
+            <div className="right">
                 <div className="inline-block">
                     <div className="relative">
                         <MenuLinksDX inline
                                      user={user}
                                      authCheck={authCheck}
                                      accountMenuIsOpen={accountMenuIsOpen}
-                                     s={s}
                         />
                     </div>
                 </div>
             </div>
-            <div className={cx(s['clearfix'], s['sm-hide'])}></div>
-            <div className={cx(s['overflow-hidden'], s['px2'])}>
+            <div className={cx('clearfix','sm-hide')}></div>
+            <div className={cx('overflow-hidden','px2')}>
             </div>
         </div>
     );
@@ -61,8 +60,7 @@ AppBar.propTypes = {
     user: React.PropTypes.object,
     authCheck: React.PropTypes.bool,
     layoutIsShifted: React.PropTypes.bool,
-    accountMenuIsOpen: React.PropTypes.bool,
-    s: React.PropTypes.object
+    accountMenuIsOpen: React.PropTypes.bool
 };
 
-export default withStyles(styles)(AppBar);
+export default AppBar;

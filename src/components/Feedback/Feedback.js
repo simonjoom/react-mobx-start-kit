@@ -1,4 +1,4 @@
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
+//import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Feedback.css';
 
 function Feedback() {
@@ -19,4 +19,4 @@ function Feedback() {
   );
 }
 
-export default withStyles(s)(Feedback);
+export default Feedback;

@@ -1,5 +1,5 @@
 import { PropTypes } from 'react';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
+//import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Login.css';
 
 const title = 'Log I';
@@ -110,4 +110,4 @@ function Login(props, context) {
 
 Login.contextTypes = { setTitle: PropTypes.func.isRequired };
 
-export default withStyles(s)(Login);
+export default Login;

@@ -17,8 +17,7 @@ class AuthModal extends React.Component {
     }
 
     render() {
-        let s = this.props.context.styles;
-        let myrefs = s['btn-disabled'];
+        let myrefs = 'btn-disabled';
         let form = this.props.form;
         return (
             <form>
@@ -42,14 +41,14 @@ class AuthModal extends React.Component {
                     <button
                         type="submit"
                         disabled={!form.isValid}
-                        className={cx(s.btn,s['btn-primary'],{
+                        className={cx('btn','btn-primary',{
         [`${myrefs}`]: !form.isValid })}
                         onClick={form.handleOnSubmit}>Login
                     </button>
                 </div>
                 <div
                     className={cx(errorMessage, {
-        hide: !form.isValid && form.genericErrorMessage,
+        'hide': !form.isValid && form.genericErrorMessage,
       })}
                 >
                     {form.genericErrorMessage}

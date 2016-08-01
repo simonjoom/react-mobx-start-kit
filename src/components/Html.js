@@ -3,6 +3,8 @@ import {analytics} from '../configauth';
 import jsonStringifySafe from 'json-stringify-safe';
 
 function Html({lang, title, description, style, script, scriptvendor, children, store}) {
+
+let styleout=style.join("");
     return (
         <html lang={lang}>
         <head>
@@ -15,7 +17,7 @@ function Html({lang, title, description, style, script, scriptvendor, children, 
             <script src="/assets/nodent.min.js"/>
             <script src="/assets/regenerator.min.js"/>
             <script src="/assets/ajv.min.js"/>
-            <style type="text/css" id="css" dangerouslySetInnerHTML={{ __html: style }}/>
+            <style type="text/css" id="css" dangerouslySetInnerHTML={{ __html: styleout }}/>
             {scriptvendor && (
                 <script src={scriptvendor}/>
             )}

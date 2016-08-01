@@ -1,6 +1,6 @@
 
 import { Component, PropTypes } from 'react';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
+//import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Content.css';
 
 class Content extends Component {
@@ -32,4 +32,4 @@ class Content extends Component {
 
 }
 
-export default withStyles(s)(Content);
+export default Content;

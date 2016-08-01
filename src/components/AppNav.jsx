@@ -2,7 +2,7 @@ import React from 'react';
 import dispatch from '~/src/core/dispatch';
 import cx from 'classnames';
 import {observer} from "mobx-react";
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
+//import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
 // components
 import Drawer from 'material-ui/Drawer';
@@ -36,4 +36,4 @@ AppNav.propTypes = {
     accountMenuIsOpen: React.PropTypes.bool
 };
 
-export default withStyles(styles)(AppNav);
+export default AppNav;

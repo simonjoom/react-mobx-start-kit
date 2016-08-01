@@ -1,4 +1,4 @@
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
+//import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Header.css';
 import Link from '../Link';
 import logoUrl from './logo-small.png';
@@ -20,4 +20,4 @@ function Header() {
     );
 }
 
-export default withStyles(s)(Header);
+export default Header;
