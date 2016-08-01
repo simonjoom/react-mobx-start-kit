@@ -1,6 +1,7 @@
 require('dotenv').config();
 import webpack from 'webpack'
 import path from 'path'
+import cssnano from 'cssnano'
 import extend from 'extend'
 //import cssnano from 'cssnano'
 import AssetsPlugin from 'assets-webpack-plugin'
@@ -13,16 +14,18 @@ var HappyPack = require('happypack');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 const debug = _debug('app:webpack:config')
 
+
 const VERBOSE = process.argv.includes('--verbose');
 
 const paths = config.utils_paths
+
+
 const {__DEV__, __PROD__, __TEST__} = config.globals
 const __DEBUG = true;
 const AUTOPREFIXER_BROWSERS = [
-    'Android 2.3',
     'Android >= 4',
     'Chrome >= 35',
-    'Firefox >= 31',
+    'Firefox >= 34',
     'Explorer >= 9',
     'iOS >= 7',
     'Opera >= 12',
@@ -42,7 +45,6 @@ const exposevar = {
         }
     }
 }
-console.log(exposevar)
 debug('Create configuration.')
 const webpackConfig = {
 // name: 'app',
@@ -56,27 +58,26 @@ const webpackConfig = {
         sourcePrefix: '  ',
     },
     resolve: {
-        root: paths.client(),
-        modulesDirectories: ['node_modules'],
+  //  packageMains: ['webpack', 'browser', 'web', 'style', 'main'],
+        root: [
+        paths.client()
+        ],
         extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx', '.json'],
+
     },
     cache: __DEBUG,
     debug: __DEBUG,
 
     module: {},
-    postcss(bundler) {
-        return {
+}
+webpackConfig.postcss = function (webpack) {
+    return [
+    require("postcss-import")({ addDependencyTo: webpack }),
 
-            default: [
-                // Transfer @import rule by inlining content, e.g. @import 'normalize.css'
-                // https://github.com/postcss/postcss-import
-                require('postcss-import')({addDependencyTo: bundler}),
-                // W3C variables, e.g. :root { --color: red; } div { background: var(--color); }
-                // https://github.com/postcss/postcss-custom-properties
-                require('postcss-custom-properties')(),
+             require('postcss-custom-properties')(),
                 // W3C CSS Custom Media Queries, e.g. @custom-media --small-viewport (max-width: 30em);
                 // https://github.com/postcss/postcss-custom-media
-                require('postcss-custom-media')(),
+             require('postcss-custom-media')(),
                 // CSS4 Media Queries, e.g. @media screen and (width >= 500px) and (width <= 1200px) { }
                 // https://github.com/postcss/postcss-media-minmax
                 require('postcss-media-minmax')(),
@@ -85,7 +86,7 @@ const webpackConfig = {
                 require('postcss-custom-selectors')(),
                 // W3C calc() function, e.g. div { height: calc(100px - 2em); }
                 // https://github.com/postcss/postcss-calc
-                require('postcss-calc')(),
+                 require('postcss-calc')(),
                 // Allows you to nest one style rule inside another
                 // https://github.com/jonathantneal/postcss-nesting
                 require('postcss-nesting')(),
@@ -104,18 +105,56 @@ const webpackConfig = {
                 // Transforms :not() W3C CSS Level 4 pseudo class to :not() CSS Level 3 selectors
                 // https://github.com/postcss/postcss-selector-not
                 require('postcss-selector-not')(),
-                // Add vendor prefixes to CSS rules using values from caniuse.com
-                // https://github.com/postcss/autoprefixer
-                require('autoprefixer')({browsers: AUTOPREFIXER_BROWSERS}),
-                //  require('postcss-url')('inline')
-            ],
-            sass: [
-                require('autoprefixer')({browsers: AUTOPREFIXER_BROWSERS}),
-            ],
-        };
-    }
+  cssnano({
+    autoprefixer: {
+      add: true,
+      remove: true,
+      browsers: ['last 2 versions']
+    },
+    discardComments: {
+      removeAll: true
+    },
+    discardUnused: false,
+    mergeIdents: false,
+    reduceIdents: false,
+    safe: true,
+    sourcemap: true
+  })
+]
 }
+// ------------------------------------
+// Style Loaders
+// ------------------------------------
+// We use cssnano with the postcss loader, so we tell
+// css-loader not to duplicate minimization.
+const BASE_CSS_LOADER = 'css?sourceMap&-minimize'
 
+// Add any packge names here whose styles need to be treated as CSS modules.
+// These paths will be combined into a single regex.
+const PATHS_TO_TREAT_AS_CSS_MODULES = [
+   // paths.base("node_modules/flex-object"),
+   // paths.base("node_modules/basscss-defaults")
+  // 'react-toolbox', (example)
+]
+
+// If config has CSS modules enabled, treat this project's styles as CSS modules.
+//if (config.compiler_css_modules) {
+  PATHS_TO_TREAT_AS_CSS_MODULES.push(
+    paths.client().replace(/[\^\$\.\*\+\-\?\=\!\:\|\\\/\(\)\[\]\{\}\,]/g, '\\$&') // eslint-disable-line
+  )
+//}
+
+  const cssModulesLoader = [
+    BASE_CSS_LOADER,
+    'modules',
+    'importLoaders=1',
+    'localIdentName=[name]__[local]___[hash:base64:5]'
+  ].join('&')
+
+const isUsingCSSModules = !!PATHS_TO_TREAT_AS_CSS_MODULES.length
+const cssModulesRegex = new RegExp(`(${PATHS_TO_TREAT_AS_CSS_MODULES.join('|')})`)
+
+console.log(cssModulesRegex);
 
 // Don't split bundles during testing, since we only want import one bundle
 /*if (!__TEST__) {
@@ -165,28 +204,46 @@ webpackConfig.module.loaders = [{
     ],
     // happy: { id: 'js' }
 },
+{
+  test: /App\.css$/,  // only App will go through this loader. e.g. app.css
+  include: cssModulesRegex,
+  loaders: [
+    'simple-universal-style',
+    'css?sourceMap&-minimize',
+    'postcss'
+  ]
+},
     {
-        test: /\.css/,
+        test: /^((?!\App).)*\.css/,
+        include: cssModulesRegex,
         loaders: [
-            'isomorphic-style-loader',
-            `css-loader?${JSON.stringify({
-                sourceMap: __DEV__,
+            'simple-universal-style',
+      cssModulesLoader,
+           /* `css-loader?${JSON.stringify({
+                sourceMap: false,
                 // CSS Modules https://github.com/css-modules/css-modules
                 modules: true,
-                localIdentName: __DEV__ ? '[name]_[local]_[hash:base64:3]' : '[hash:base64:4]',
+                localIdentName: __DEV__ ? '[name]__[local]___[hash:base64:5]' : '[hash:base64:5]',
                 // CSS Nano http://cssnano.co/options/
-                minimize: true,
-            })}`,
-            'postcss-loader?pack=default',
+                minimize: false,
+                importLoaders:true
+            })}`,*/
+            'postcss',
         ],
         // happy: { id: 'css' }
     },
     {
         test: /\.scss$/,
+        include: cssModulesRegex,
         loaders: [
-            'isomorphic-style-loader',
-            `css-loader?${JSON.stringify({sourceMap: __DEV__, minimize: true})}`,
-            'postcss-loader?pack=sass',
+            'simple-universal-style',
+      cssModulesLoader,
+      /*
+            `css-loader?${JSON.stringify({sourceMap: __DEV__,
+             minimize: true,
+            importLoaders:true
+            })}`,*/
+            'postcss',
             'sass-loader',
         ],
     },
@@ -404,7 +461,7 @@ clientConfig.entry = {
         ? [
         "font-awesome-webpack!" + paths.client('font-awesome.config.js'),
         'react-hot-loader/patch',
-        'webpack-dev-server/client?http://localhost:/'+process.env['IO_PORT'],
+        'webpack-dev-server/client?http://localhost:'+process.env['IO_PORT'],
         "webpack/hot/only-dev-server"
     ].concat(APP_ENTRY_PATHS)
         : APP_ENTRY_PATHS
@@ -453,7 +510,7 @@ if (__DEV__) {
 // Configuration for the server-side bundle (server.js)
 // -----------------------------------------------------------------------------
 
-config.globals.process.env.BROWSER = false;
+exposevar.process.env.BROWSER = false;
 const serverConfig = extend(true, {}, webpackConfig, {
     name: 'server',
     output: {
@@ -483,7 +540,8 @@ const serverConfig = extend(true, {}, webpackConfig, {
         //  new HappyPack({ id: 'css' }),
         // Define free variables
         // https://webpack.github.io/docs/list-of-plugins.html#defineplugin
-        new webpack.DefinePlugin(config.globals)
+
+        new webpack.DefinePlugin(extend(true, {}, config.globals, exposevar)),
 
         // Adds a banner to the top of each generated chunk
         // https://webpack.github.io/docs/list-of-plugins.html#bannerplugin

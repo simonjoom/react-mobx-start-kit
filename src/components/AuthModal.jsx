@@ -31,10 +31,8 @@ const handleShowSignupSection = () =>
     dispatch('ui.authModal.toggleSection', 'signup');
 
 
-const AuthModal2 = ({open, showSection, forms, s}) => {
+const AuthModal2 = ({open, showSection, forms}) => {
 
-    let myrefs = s['btn-primary'];
-    let myouts = s['btn-outline'];
     return (
         <Dialog
             title="Register or Login"
@@ -43,35 +41,35 @@ const AuthModal2 = ({open, showSection, forms, s}) => {
             contentStyle={styles}
             onRequestClose={handleCloseModal}
         >
-            <div className={cx(s.center,s.m3)}>
-                <div className={cx(s['inline-block'],s.clearfix)}>
+            <div className={cx('center','m3')}>
+                <div className={cx('inline-block','clearfix')}>
                     <FlatButton
                         label="Login"
                         primary={true}
                         onClick={handleShowSigninSection}
-                        className={cx(s.buttonGroup, s['rounded-left'], {
-            [`${myrefs}`]: showSection === 'signin',
-            [`${myouts}`]: showSection !== 'signin',
+                        className={cx(buttonGroup,'rounded-left', {
+            'btn-primary': showSection === 'signin',
+            'btn-outline': showSection !== 'signin',
           })}
                     />
                     <FlatButton
                         label="Register"
                         primary={true}
                         keyboardFocused={true}
-                        className={cx(s.buttonGroup, s['rounded-right'], {
-            [`${myrefs}`]: showSection === 'signup',
-            [`${myouts}`]: showSection !== 'signup',
+                        className={cx(buttonGroup,'rounded-right', {
+            'btn-primary': showSection === 'signup',
+            'btn-outline': showSection !== 'signup',
           })}
                         onClick={handleShowSignupSection}
                     />
                 </div>
             </div>
-            <div className={cx(s.authSection, { [s.hide]  : showSection !== 'signin' })}>
+            <div className={cx(authSection, {'hide' : showSection !== 'signin' })}>
                 <h3>Login</h3>
                 <AuthFormLogin form={forms.login}/>
             </div>
 
-            <div className={cx(s.authSection, { [s.hide]: showSection !== 'signup' })}>
+            <div className={cx(authSection, {'hide': showSection !== 'signup' })}>
                 <h3>Register</h3>
                 <AuthFormRegister form={forms.register}/>
             </div>

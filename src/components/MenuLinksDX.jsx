@@ -30,8 +30,8 @@ const handleLogout = (e) => {
     dispatch('auth.logout');
 };
 
-const UserSubMenu = (s) => {
-    const ul = cx(s['list-reset'], s['mb0']);
+const UserSubMenu = () => {
+    const ul = cx(list-reset, mb0);
     return (
         <ul className={ul}>
             <li>
@@ -48,7 +48,7 @@ const UserSubMenu = (s) => {
         </ul>
     );
 }
-const MenuLinksDX = ({user, inline, authCheck, accountMenuIsOpen, s}) => (
+const MenuLinksDX = ({user, inline, authCheck, accountMenuIsOpen}) => (
     <span>
     <div className={cx(styles.divider, { 'border-top': !inline })}/>
     <If condition={authCheck}>
@@ -63,14 +63,14 @@ const MenuLinksDX = ({user, inline, authCheck, accountMenuIsOpen, s}) => (
           <div
               className={cx(
               [styles.menuAccount, menuAccount],
-              { hide: !accountMenuIsOpen }
+              { 'hide': !accountMenuIsOpen }
             )}
           >
-            <UserSubMenu s/>
+            <UserSubMenu/>
           </div>
         <Else />
           <div className={cx(styles.divider, { 'border-top': !inline })}/>
-          <UserSubMenu s/>
+          <UserSubMenu/>
         </If>
       </span>
     <Else />
@@ -79,15 +79,15 @@ const MenuLinksDX = ({user, inline, authCheck, accountMenuIsOpen, s}) => (
         className={cx(styles.baseBtn, {
           [styles.baseInlineBtn]: inline,
           [styles.loginBtn]: inline,
-          ['inline-block']: inline,
-          ['block']: !inline,
+          'inline-block': inline,
+          'block': !inline,
         })} key="1" hoverColor="#c2c222" icon={<i className="mb3 fa fa-sign-in" />}>Login</Link>
   <Link2 to="" onClick={handleAuthModalSignup}
          className={cx(styles.baseBtn, {
           [styles.baseInlineBtn]: inline,
           [styles.registerBtn]: inline,
-          ['inline-block']: inline,
-          ['block']: !inline,
+          'inline-block': inline,
+          'block': !inline,
         })} key="2"><i className="mb3 fa fa-sign-up"/> Register</Link2>
 
     </If>

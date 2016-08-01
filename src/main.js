@@ -22,12 +22,12 @@ let removeHistoryListener = () => {
 
 const context = {
     muiTheme: {},
-    insertCss: (...styles) => {
+   /* insertCss: (...styles) => {
         const removeCss = styles.map(style => style._insertCss()); // eslint-disable-line no-underscore-dangle, max-len
         return () => {
             removeCss.forEach(f => f());
         }
-    },
+    },*/
     setTitle: value => (document.title = value),
     setMeta: (name, content) => {
         // Remove and create a new <meta /> tag in order to make it work

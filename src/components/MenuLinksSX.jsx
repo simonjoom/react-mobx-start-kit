@@ -4,9 +4,9 @@ import Link from './Link';
 import Navigation from './Navigation';
 
 
-function MenuLinksSX(inline, s) {
-    const btnBlock = cx(s.btn, s.block, s.py2, s.m0);
-    const btnInline = cx(s.btn, s['inline-block'], s.py2, s.m0);
+function MenuLinksSX(inline) {
+    const btnBlock = cx('btn', 'block', 'py2', 'm0');
+    const btnInline = cx('btn', 'inline-block','py2','m0');
     return (
         <span>
   <Navigation className={inline ? btnInline : btnBlock}/>
@@ -15,8 +15,7 @@ function MenuLinksSX(inline, s) {
 }
 
 MenuLinksSX.propTypes = {
-    inline: React.PropTypes.bool,
-    s: React.PropTypes.object
+    inline: React.PropTypes.bool
 };
 
 export default MenuLinksSX;

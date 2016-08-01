@@ -1,8 +1,5 @@
-
 import Home from './Home';
 import fetch from '../../core/fetch';
-import _debug from 'debug'
-const debug = _debug('app:server')
 
 export default {
 
