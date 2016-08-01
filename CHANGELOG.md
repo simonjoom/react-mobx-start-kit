@@ -1,6 +1,15 @@
 Changelog
 =========
 
+
+0.2.0
+-----
+#### Improvements BaseCSS CSS
+See:
+https://github.com/css-modules/css-modules/issues/113
+add entry point app.css in not module css (it's global for entire project)
+
+
 0.1.0
 -----
 
