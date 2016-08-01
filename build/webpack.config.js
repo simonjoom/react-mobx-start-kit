@@ -1,6 +1,7 @@
 require('dotenv').config();
 import webpack from 'webpack'
 import path from 'path'
+import cssnano from 'cssnano'
 import extend from 'extend'
 //import cssnano from 'cssnano'
 import AssetsPlugin from 'assets-webpack-plugin'
@@ -19,10 +20,9 @@ const paths = config.utils_paths
 const {__DEV__, __PROD__, __TEST__} = config.globals
 const __DEBUG = true;
 const AUTOPREFIXER_BROWSERS = [
-    'Android 2.3',
     'Android >= 4',
     'Chrome >= 35',
-    'Firefox >= 31',
+    'Firefox >= 34',
     'Explorer >= 9',
     'iOS >= 7',
     'Opera >= 12',
@@ -106,7 +106,23 @@ const webpackConfig = {
                 require('postcss-selector-not')(),
                 // Add vendor prefixes to CSS rules using values from caniuse.com
                 // https://github.com/postcss/autoprefixer
-                require('autoprefixer')({browsers: AUTOPREFIXER_BROWSERS}),
+               // require('autoprefixer')({browsers: AUTOPREFIXER_BROWSERS}),
+                 cssnano({
+    autoprefixer: {
+      add: true,
+      remove: true,
+      browsers: AUTOPREFIXER_BROWSERS
+    },
+    discardComments: {
+      removeAll: true
+    },
+    discardUnused: false,
+    mergeIdents: false,
+    reduceIdents: false,
+    safe: true,
+    sourcemap: __DEV__
+  })
+
                 //  require('postcss-url')('inline')
             ],
             sass: [
@@ -170,12 +186,12 @@ webpackConfig.module.loaders = [{
         loaders: [
             'isomorphic-style-loader',
             `css-loader?${JSON.stringify({
-                sourceMap: __DEV__,
+                sourceMap: false,
                 // CSS Modules https://github.com/css-modules/css-modules
                 modules: true,
-                localIdentName: __DEV__ ? '[name]_[local]_[hash:base64:3]' : '[hash:base64:4]',
+                localIdentName: __DEV__ ? '[name]__[local]___[hash:base64:5]' : '[hash:base64:5]',
                 // CSS Nano http://cssnano.co/options/
-                minimize: true,
+                minimize: false,
             })}`,
             'postcss-loader?pack=default',
         ],

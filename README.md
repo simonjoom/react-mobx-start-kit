@@ -10,7 +10,7 @@ The bundle out is divided in 2 parts, you can check around 10Mb just for the app
 
 In building this,  The more important thing for us was to have a good SSR (server side rendering) with not too much complicate code
 
-We decided to merge 5 important features!
+We decided to add 5 important features!
 
 * [No react-router better then](https://github.com/kriasoft/universal-router)   ->https://github.com/kriasoft/universal-router
 
@@ -20,14 +20,14 @@ We decided to merge 5 important features!
 
 * [Last Hot Loader for development use](https://github.com/gaearon/react-hot-loader) ->https://github.com/gaearon/react-hot-loader
 
-* [NO Bootstrap better then... BASSCSS](http://www.basscss.com)  with font-awesome
+* [NO Bootstrap better then... BASSCSS](http://www.basscss.com) with font-awesome
 
 
 We stopped redux for mobx, not only for performance but Mobx is much simpler and easy to use. Thanks for rfx-stack to help us in this way;
 
 We do NOT use react-router that everybody use, just because universal-router is more simple and we prefer to know how it's working under the hood
  
-Our webpack build system is setup with the last hot reloading, CSS modules with Sass support, unit testing, code coverage reports, bundle splitting, and a whole lot more.
+Our webpack build system is setup with the last hot reloading system, CSS modules with Sass support, unit testing, code coverage reports, bundle splitting, and a whole lot more.
 
 The primary goal of this project is to remain as **unopinionated** as possible. 
 Its purpose is not to dictate your project structure or to demonstrate a complete sample application, but to provide a set of tools intended to make front-end development robust, easy, and, most importantly, fun. Check out the full feature list below!
@@ -54,7 +54,7 @@ You can use it for all you need :) be the first to contribute and find bugs
 
 
 ## WE HIRE !
-We are tired to work alone on this, we hire everybody with very good skill in feathers and mobx to continu to develop it.
+We need people, we hire everybody with very good skill and motivate by feathers and mobx to continu to develop it.
 
 
 ## Getting Started
@@ -118,7 +118,7 @@ Here Main files and directories:
             ├── Home.js      # The view for the component of this route 
 │        └── Root            # Fractal route
 │           ├── index.js     # Route definitions and async split points
-            ├── Root.js      # View of Root --> we added a debugger at the end of it to see the mobx-stores variable change 
+            ├── Root.js      # View of Root --> we added a debugger at the end of it then you can see the mobx-stores variable change 
 ``` 
 
 

@@ -1,6 +1,6 @@
 {
   "name": "react-mobx-starter-kit",
-  "version": "1.0 beta",
+  "version": "0.1.2",
   "description": "Get started with React, Mobx and a Personal-Router!",
   "main": "index.js",
   "engines": {
@@ -105,6 +105,7 @@
     "browser-sync-webpack-plugin": "^1.1.0",
     "compression": "^1.6.2",
     "cookie-parser": "^1.4.3",
+    "cssnano": "^3.7.3",
     "debug": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^2.0.1",
     "express": "latest",
