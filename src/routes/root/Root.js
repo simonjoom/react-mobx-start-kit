@@ -2,7 +2,6 @@ import { Component ,PropTypes} from 'react';
 import { observer } from "mobx-react";
 var _ = require('lodash');
 import cx from 'classnames';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
 //import s from './Home.css';
 import s from '../../styles/home.css';
 
@@ -98,5 +97,5 @@ return _.map(_.toPlainObject(appstat),function(val,key) {
     }
 }
 
-export default withStyles(s)(Root);
+export default Root;
 //Root.contextTypes = { setTitle: PropTypes.func.isRequired };

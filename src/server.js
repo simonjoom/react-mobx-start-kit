@@ -42,7 +42,6 @@ import { getStyles } from 'simple-universal-style-loader'
 
 const app = express();
 
-console.log(process.env);
 const port = process.env.PORT || 3000;
 
 //if(__DEV__){
@@ -102,7 +101,6 @@ app.use('/assets/*', proxy({
  );
  */
 let setinjectTapEventPlugin = true
-let css = [];
 const data = {
     lang: 'en',
     title: 'un titre',
@@ -124,7 +122,6 @@ const data = {
 //return async (req, res, next) => {
 
 function render(template, component, context, actionResult, store, appstate) {
-//css=[];
     if (setinjectTapEventPlugin) {
         appstate.ui.myinjectTapEventPlugin(); // material-ui fix
     }
@@ -134,16 +131,10 @@ function render(template, component, context, actionResult, store, appstate) {
             <App children={ component }/>
         </Provider>
     )
-
-    /* withContext({
-     //insertCss: styles => css.push(styles._getCss()), // eslint-disable-line
-     ...context,
-     }, component));*/
     return content && `<!doctype html>\n${renderToStaticMarkup(
             React.createElement(template || Html, {
                 /* start: default values */
                 meta: [],
-                style: css.join(''),
                 ...context,
                 store,
                 //  ...actionResult,
