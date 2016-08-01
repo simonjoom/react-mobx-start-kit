@@ -172,16 +172,16 @@ const getStyles = (localAssets = []) => (
 
 function createApp({routes, context, template, storetostore, store} = {}) {
     return async(req, res, next) => {
-        let result;
-        let html;
-        let ctx;
-
+        let result,html,ctx,error;
+                error = new Error('Not found');
+                error.status = 404;
         try {
             ctx = {
                 path: req.path,
                 query: req.query,
                 hash: null,
                 history: useQueries(createMemoryHistory)(req.originalUrl),
+                error,
                 ...context
                 //...(context instanceof Function ? context(req) : context),
             };
@@ -193,28 +193,24 @@ function createApp({routes, context, template, storetostore, store} = {}) {
                 return;
             }
 
+ if (result.title=="error")
+ throw 'error';
+
             // Render React component
             if (result && result.component) {
                 context.title = result.title;
                 html = render(template, React.createElement(result.component, result.props), context, result, storetostore, store);
             }
 
-            if (!html) {
-                const error = new Error('Not found');
-                error.status = 404;
-                throw error;
-            }
-
             res.status(result.status || 200).send(html);
         } catch (error) {
-            console.log("error")
-            console.log(error)
-            error.status = error.status || 500;
+               let error = new Error('Not found');
+                error.status = 404;
             try {
-                result = await match(routes, {...ctx, canonicalPath: req.path, path: '/error', error});
-
                 if (result && result.component) {
-                    html = render(template, React.createElement(result.component, result.props), ctx, result, storetostore, store);
+                context.title = result.title;
+               // html = render(template, React.createElement(result.component, result.props), context, result, storetostore, store);
+                 html = render(template, React.createElement(result.component, result.props), {...context, canonicalPath: req.path, path: '/error', error}, result, storetostore, store);
                 }
 
                 if (html) {

@@ -219,15 +219,6 @@ webpackConfig.module.loaders = [{
         loaders: [
             'simple-universal-style',
       cssModulesLoader,
-           /* `css-loader?${JSON.stringify({
-                sourceMap: false,
-                // CSS Modules https://github.com/css-modules/css-modules
-                modules: true,
-                localIdentName: __DEV__ ? '[name]__[local]___[hash:base64:5]' : '[hash:base64:5]',
-                // CSS Nano http://cssnano.co/options/
-                minimize: false,
-                importLoaders:true
-            })}`,*/
             'postcss',
         ],
         // happy: { id: 'css' }
@@ -238,11 +229,6 @@ webpackConfig.module.loaders = [{
         loaders: [
             'simple-universal-style',
       cssModulesLoader,
-      /*
-            `css-loader?${JSON.stringify({sourceMap: __DEV__,
-             minimize: true,
-            importLoaders:true
-            })}`,*/
             'postcss',
             'sass-loader',
         ],
@@ -285,16 +271,7 @@ webpackConfig.module.loaders = [{
  'localIdentName=[name]__[local]___[hash:base64:5]'
  ].join('&')
 
- webpackConfig.module.loaders.push({
- test: /\.scss$/,
- include: cssModulesRegex,
- loaders: [
- 'style',
- cssModulesLoader,
- 'postcss',
- 'sass?sourceMap'
- ]
- })
+
 
  webpackConfig.module.loaders.push({
  test: /\.css$/,

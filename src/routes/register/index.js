@@ -1,5 +1,3 @@
-
-import React from 'react';
 import Register from './Register';
 
 export default {
@@ -7,7 +5,8 @@ export default {
   path: '/register',
 
   action() {
-    return <Register />;
+
+  return { title: 'Register', component: Register, props:{} };
   },
 
 };

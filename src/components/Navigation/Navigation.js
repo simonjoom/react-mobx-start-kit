@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react';
 import cx from 'classnames';
-//import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Navigation.css';
 import Link from '../Linkmaterial';
 
@@ -14,6 +13,7 @@ function Navigation({className}) {
             <Link className={cx(s.link,className)} to="/login">Log in</Link>
             <span className={cx(s.spacer,className)}>or</span>
             <Link className={cx(s.link, s.highlight,className)} to="/register">Sign up</Link>
+            <Link className={cx(s.link, s.highlight,className)} to="/test">Test 404</Link>
         </div>
     );
 }

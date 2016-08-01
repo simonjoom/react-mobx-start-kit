@@ -106,7 +106,9 @@ function createApp(history) {
     FastClick.attach(document.body);
 
     async function onLocationChange(location) {
-
+        let result,html,ctx,error;
+                error = new Error('Not found');
+                error.status = 404;
         // Save the page scroll position into the current location's state
         if (location.key) {
             saveState(location.key, {
@@ -121,7 +123,8 @@ function createApp(history) {
             query: location.query,
             hash: location.hash,
             history,
-            ...context
+            ...context,
+            error
             // ...(context instanceof Function ? context() : context),
         };
         //   return async () => {
@@ -138,7 +141,8 @@ function createApp(history) {
                 location.push(result.content);
                 return;
             }
-
+ if (result.title=="error")
+ throw 'error';
             if (result && result.component) {
                 await new Promise((resolve, reject) => {
                     try {
@@ -173,37 +177,31 @@ function createApp(history) {
                 /* if (onRenderComplete) {
                  onRenderComplete();
                  }*/
-            } else {
-                console.log("err");
-                const error = new Error('Not found');
-                error.status = 404;
-                throw error;
             }
         } catch (error) {
-            error.status = error.status || 500;
+            const MOUNT_NODE = document.getElementById('root')
+       let error = new Error('Not found');
+                error.status = 404;
             try {
-                result = await match(routes, {
-                    ...ctx,
-                    canonicalPath: location.pathname,
-                    path: '/error',
-                    error,
-                });
                 if (result && result.component) {
                     await new Promise((resolve, reject) => {
                         try {
-                            component = React.createElement(result.component, result.props);
-                            ReactDOM.render(
-                                <Provider
-                                    context={ ctx }
-                                    appstate={ hotRehydrate( appstate ) }>
-
+                      let store = hotRehydrate(appstate)
+                        component = React.createElement(result.component, result.props);
+                        if (setinjectTapEventPlugin) {
+                            store.ui.myinjectTapEventPlugin(); // material-ui fix
+                        }
+                        ReactDOM.render(
+                            <Provider context={ context }
+                                      appstate={ store }>
+                                <AppContainer>
                                     <App children={ component }/>
-
-                                </Provider>, MOUNT_NODE, () => {
-                                    document.title = result.title || '';
-                                    renderComplete("t")
-                                    resolve();
-                                });
+                                </AppContainer>
+                            </Provider>, MOUNT_NODE, () => {
+                                document.title = result.title || '';
+                                renderComplete("t")
+                                resolve()
+                            });
                         } catch (err) {
                             console.log("err");
                             reject(err);
@@ -214,10 +212,11 @@ function createApp(history) {
                 console.log("err");
                 console.error(err.stack); // eslint-disable-line no-console
                 throw err;
+
             }
-            console.log("err");
-            console.error(error.stack); // eslint-disable-line no-console
-            throw error;
+           // console.log("err");
+          //console.error(error.stack); // eslint-disable-line no-console
+          //  throw error;
         }
     }
 

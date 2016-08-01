@@ -1,10 +1,6 @@
-
-* {
+.root {
   line-height: 1.2;
   margin: 0;
-}
-
-html {
   color: #888;
   display: table;
   font-family: sans-serif;
@@ -21,30 +17,30 @@ body {
   /* stylelint-enable */
 }
 
-h1 {
+.root :global h1 {
   color: #555;
   font-size: 2em;
   font-weight: 400;
 }
 
-p {
+.root :global p {
   margin: 0 auto;
   width: 280px;
 }
 
-pre {
+.root :global pre {
   text-align: left;
   margin-top: 2rem;
 }
 
 @media only screen and (max-width: 280px) {
 
-  body,
-  p {
+  .root :global body,
+  .root :global p {
     width: 95%;
   }
 
-  h1 {
+  .root :global h1 {
     font-size: 1.5em;
     margin: 0 0 0.3em;
   }

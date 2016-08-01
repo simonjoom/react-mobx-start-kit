@@ -5,7 +5,8 @@ export default {
   path: '/login',
 
   action() {
-    return <Login />;
+  const title="Login";
+  return { title: title, component: Login, props:{} };
   },
 
 };

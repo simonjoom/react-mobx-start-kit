@@ -1,6 +1,4 @@
 import React, { PropTypes } from 'react'
-import { Router } from 'react-router'
-import { Provider } from 'react-redux'
 import { AppContainer } from 'react-hot-loader'
 
 class RootContainer extends React.Component {

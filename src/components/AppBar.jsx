@@ -3,7 +3,6 @@ import dispatch from '~/src/core/dispatch';
 import cx from 'classnames';
 import {observer} from "mobx-react";
 
-//import withStyles from 'isomorphic-style-loader/lib/withStyles';
 // components
 import MenuLinksSX from './MenuLinksSX';
 import MenuLinksDX from './MenuLinksDX';

@@ -1,8 +1,8 @@
 import { PropTypes } from 'react';
-//import withStyles from 'isomorphic-style-loader/lib/withStyles';
-//import Errorstyle from './ErrorPage.css';
+import Errorstyle from './ErrorPage.css';
 
-export function ErrorPage({ error }, context) {
+const ErrorPage = ({error,context,appstate})=>{
+//export function ErrorPage({ error }) {
   let title = 'Error';
   let content = 'Sorry, a critical error occurred on this page.';
   let errorMessage = null;
@@ -12,10 +12,6 @@ export function ErrorPage({ error }, context) {
     content = 'Sorry, the page you were trying to view does not exist.';
   } else if (process.env.NODE_ENV !== 'production') {
     errorMessage = <pre>{error.stack}</pre>;
-  }
-
-  if (context.setTitle) {
-    context.setTitle(title);
   }
 
   return (
@@ -30,4 +26,4 @@ export function ErrorPage({ error }, context) {
 ErrorPage.propTypes = { error: PropTypes.object.isRequired };
 ErrorPage.contextTypes = { setTitle: PropTypes.func.isRequired };
 
-export default  ErrorPage;
+export default ErrorPage;
