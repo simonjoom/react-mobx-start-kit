@@ -39,6 +39,13 @@ export default class AuthStore {
   }
 
   @action
+  loginfb() {
+    return app()
+      .authenticate({ type: 'local'})
+      .then((result) => this.updateUser(result.data));
+  }
+
+  @action
   login({ email, password }) {
     return app()
       .authenticate({ type: 'local', email, password })

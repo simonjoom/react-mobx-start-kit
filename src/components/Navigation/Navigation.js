@@ -10,9 +10,6 @@ function Navigation({className}) {
             <Link className={cx(s.link,className)} to="/contact">Contact</Link>
             <Link className={cx(s.link,className)} to="/root">Root</Link>
             <span className={cx(s.spacer,className)}> | </span>
-            <Link className={cx(s.link,className)} to="/login">Log in</Link>
-            <span className={cx(s.spacer,className)}>or</span>
-            <Link className={cx(s.link, s.highlight,className)} to="/register">Sign up</Link>
             <Link className={cx(s.link, s.highlight,className)} to="/test">Test 404</Link>
         </div>
     );

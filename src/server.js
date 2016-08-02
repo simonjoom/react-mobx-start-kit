@@ -9,6 +9,7 @@ import {renderToString, renderToStaticMarkup} from 'react-dom/server';
 /*import expressJwt from 'express-jwt';
  import expressGraphQL from 'express-graphql';
  import jwt from 'jsonwebtoken';*/
+import passport from 'passport';
 import Html from './components/Html';
 import {ErrorPage} from './routes/error/ErrorPage';
 import errorPageStyle from './routes/error/ErrorPage.css';
@@ -69,6 +70,20 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
+app.use(passport.initialize());
+
+app.get('/auth/facebook',
+  passport.authenticate('facebook', { scope: ["public_profile","email"], session: false })
+);
+app.get('/auth/facebook/return',
+  passport.authenticate('facebook', { failureRedirect: '/login', session: false }),
+  (req, res) => {
+    const expiresIn = 60 * 60 * 24 * 180; // 180 days
+    const token = jwt.sign(req.user, auth.jwt.secret, { expiresIn });
+    res.cookie('id_token', token, { maxAge: 1000 * expiresIn, httpOnly: true });
+    res.redirect('/');
+  }
+);
 
 app.use('/assets/*', proxy({
         target: 'http://localhost:'+process.env['IO_PORT'], changeOrigin: true
@@ -143,32 +158,6 @@ function render(template, component, context, actionResult, store, appstate) {
         )}`;
 }
 
-/*
-const fixLocalAsset = assets => (
-  (Array.isArray(assets) ? assets : [assets]).map(asset => `/${asset}`)
-)
-
-const getAssets = (localAssets = []) => (
-  Array.concat(
-// layout.script.map(item => item.src),
-// layout.link.map(item => item.href),
-    localAssets.map(asset => fixLocalAsset(asset))
-  )
-)
-
-
-const getAssetsByExtension = (extension, localAssets = []) => (
-  getAssets(localAssets).filter(asset => new RegExp('.(' + extension + ')$').test(asset))
-)
-
-const getScripts = (localAssets = []) => (
-  getAssetsByExtension('js', localAssets)
-)
-
-const getStyles = (localAssets = []) => (
-  getAssetsByExtension('css', localAssets)
-)
-*/
 
 function createApp({routes, context, template, storetostore, store} = {}) {
     return async(req, res, next) => {
@@ -232,7 +221,7 @@ function initapp() {
         let addscript = [];
         console.log(req.path)
         try {
-            if ((/(\.ico|\.png|\.js|\.jpg|\.map|\.xml|\.txt)$/.test(req.path)) || (/socket.*/.test(req.path)) || (/sockjs-node.*/.test(req.path))) {
+            if ((/(\.ico|\.png|\.js|\.jpg|\.map|\.xml|\.txt)$/.test(req.path)) || (/auth.*/.test(req.path)) || (/socket.*/.test(req.path)) || (/sockjs-node.*/.test(req.path))) {
                 console.log(req.path)
                 await next()
             } else {

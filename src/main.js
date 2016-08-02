@@ -118,6 +118,9 @@ function createApp(history) {
             });
         }
 
+if (/auth.*/.test(location)){
+return false;
+}
         ctx = {
             path: location.pathname,
             query: location.query,

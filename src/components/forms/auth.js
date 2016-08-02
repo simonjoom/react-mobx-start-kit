@@ -3,6 +3,14 @@ import schema from '~/src/shared/schemas/auth';
 import dispatch from '~/src/core/dispatch';
 
 class AuthForm extends Form {
+ loginfb = (e) => {
+        e.preventDefault();
+        dispatch('auth.loginfb')
+            .then(() => dispatch('ui.authModal.toggle', 'close'))
+            .then(() => dispatch('ui.snackBar.open', 'Login Successful.'))
+            .then(() => this.clear())
+            .catch((err) => this.invalidate(err.message));
+    }
 
     handleOnSubmit = (e) => {
         e.preventDefault();

@@ -8,13 +8,11 @@
   text-align: center;
   width: 100%;
 }
-
+/*
 body {
   display: table-cell;
   vertical-align: middle;
-  /* stylelint-disable */
   margin: 2em auto;
-  /* stylelint-enable */
 }
 
 .root :global h1 {
@@ -46,3 +44,4 @@ body {
   }
 
 }
+*/

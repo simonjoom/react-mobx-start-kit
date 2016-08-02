@@ -15,10 +15,10 @@ export function app() {
 
   instance = feathers()
     .configure(feathersHooks())
-  //  .configure(feathersSocketClient(io(uri)))
+    .configure(feathersSocketClient(io(uri)))
     .configure(feathersAuth({ storage,
       tokenKey: 'token',
-      cookie: 'token',
+      cookie: 'token'
     }));
 
   return instance;

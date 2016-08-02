@@ -20,7 +20,7 @@ var _default = function _default() {
   (0, _logger.log)('Init API Middleware: Before');
 
   var app = this;
-  app.use((0, _expressCors2.default)({ credentials: true, allowedOrigins: ['http://localhost:3001', 'http://localhost:3000', 'http://localhost:3030'] }));
+  app.use((0, _expressCors2.default)({ credentials: true, allowedOrigins: ['http://localhost:8080', 'http://localhost:3000', 'http://localhost:8000'] }));
   // app.use(cors({ origin: true }));
   app.use(_bodyParser2.default.json());
   app.use(_bodyParser2.default.urlencoded({ extended: true }));

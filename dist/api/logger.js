@@ -1,18 +1,12 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.logServerConfig = exports.logInit = exports.logerreur = exports.log = undefined;
 
-var _debug2 = require("debug");
-
-var _debug3 = _interopRequireDefault(_debug2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var log = (0, _debug3.default)("API:info");
-var logerreur = (0, _debug3.default)("API:error");
+var error, log;
+exports.error = error = console.log.bind(error);
+exports.log = log = console.log.bind(log);
 
 function logInit() {
   log('------------------------------------------');
@@ -49,7 +43,7 @@ function logServerConfig() {
 }
 
 exports.log = log;
-exports.logerreur = logerreur;
+exports.error = error;
 exports.logInit = logInit;
 exports.logServerConfig = logServerConfig;
 ;
@@ -59,13 +53,13 @@ exports.logServerConfig = logServerConfig;
     return;
   }
 
-  __REACT_HOT_LOADER__.register(log, "log", "api/logger.js");
+  __REACT_HOT_LOADER__.register(error, 'error', 'api/logger.js');
 
-  __REACT_HOT_LOADER__.register(logerreur, "logerreur", "api/logger.js");
+  __REACT_HOT_LOADER__.register(log, 'log', 'api/logger.js');
 
-  __REACT_HOT_LOADER__.register(logInit, "logInit", "api/logger.js");
+  __REACT_HOT_LOADER__.register(logInit, 'logInit', 'api/logger.js');
 
-  __REACT_HOT_LOADER__.register(logServerConfig, "logServerConfig", "api/logger.js");
+  __REACT_HOT_LOADER__.register(logServerConfig, 'logServerConfig', 'api/logger.js');
 })();
 
 ;

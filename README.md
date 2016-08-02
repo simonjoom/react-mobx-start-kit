@@ -10,7 +10,7 @@ The bundle out is divided in 2 parts, you can check around 10Mb just for the app
 
 In building this,  The more important thing for us was to have a good SSR (server side rendering) with not too much complicate code
 
-We decided to add 5 important features!
+We decided to add 6 important features!
 
 * [No react-router better then](https://github.com/kriasoft/universal-router)   ->https://github.com/kriasoft/universal-router
 
@@ -22,6 +22,9 @@ We decided to add 5 important features!
 
 * [NO Bootstrap better then... BASSCSS](http://www.basscss.com) with font-awesome
 
+* [Feather for api authentication user/management](https://github.com/feathersjs) 
+
+
 
 We stopped redux for mobx, not only for performance but Mobx is much simpler and easy to use. Thanks for rfx-stack to help us in this way;
 
@@ -31,6 +34,8 @@ Our webpack build system is setup with the last hot reloading system, CSS module
 
 The primary goal of this project is to remain as **unopinionated** as possible. 
 Its purpose is not to dictate your project structure or to demonstrate a complete sample application, but to provide a set of tools intended to make front-end development robust, easy, and, most importantly, fun. Check out the full feature list below!
+
+
 
 These npm helped us to configurate webpack with react-hot-loader 
 
@@ -61,9 +66,12 @@ We need people, we hire everybody with very good skill and motivate by feathers 
 
 After confirming that your development environment meets the specified [requirements](#requirements), you can follow these steps to get the project up and running:
 
+
 ```bash
 $ git clone https://github.com/simonjoom/react-start-mobxkit
 $ cd react-mobx-starter-kit
+$ mongod                        # the api need mongo instance running
+$ node ./bin/api.js             # run api in developement mode (watch files mods)
 $ npm install                   # Install project dependencies
 $ npm start                     # Compile and launch
 ```
@@ -125,6 +133,7 @@ Here Main files and directories:
 ## Requirements
 * node `^4.2.0`
 * npm `^3.0.0`
+* mongod
 
 ## Development
 

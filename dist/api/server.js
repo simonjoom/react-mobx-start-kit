@@ -58,23 +58,24 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 //import { startApiServer as start } from '../utils/server.start';
 
+require('dotenv').config();
+
 (0, _services.setupServicesAutoload)({
   dir: __dirname,
   adapter: _feathersMongoose2.default,
   connector: _connector.connector
-}); //require('../server.babel');
-
+});
 
 var app = (0, _feathers2.default)().configure((0, _feathersConfiguration2.default)(_path2.default.join(__dirname, '/config'), 'feathers'));
 
-app.use((0, _expressCors2.default)({ credentials: true, allowedOrigins: ['http://localhost:3001', 'http://localhost:8000', 'http://localhost:3000'] }));
+app.use((0, _expressCors2.default)({ credentials: true, allowedOrigins: ['http://localhost:8080', 'http://localhost:8000', 'http://localhost:3000'] }));
 
 app.use((0, _compression2.default)()).configure(_before2.default).configure((0, _feathersHooks2.default)()).configure((0, _feathersRest2.default)()).configure((0, _feathersSocketio2.default)(function (io) {
   return io.set('origins', '*:*');
 })).configure(_auth2.default).configure(_services.initServicesAutoload).configure(_after2.default);
 //  .configure(start);
 
-var server = app.listen(3030);
+var server = app.listen(process.env['API_PORT']);
 server.on('listening', function () {
   return (0, _logger.logServerConfig)('API');
 });

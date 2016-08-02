@@ -65,7 +65,7 @@ if (config.env === 'development') {
         console.log('Bundled in ' + (Date.now() - bundleStart0) + 'ms!');
         console.log(stats.assetsByChunkName);
         if (isdone) {
-            app.use(webpackDevMiddlewareInstance)
+          //  app.use(webpackDevMiddlewareInstance)
             app.use(...hotMiddlewares)
         }
     });

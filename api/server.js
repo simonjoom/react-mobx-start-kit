@@ -25,7 +25,9 @@ setupServicesAutoload({
   connector,
 });
 
+
 const app = feathers().configure(configuration(path.join(__dirname,'/config'), 'feathers'));
+
 
 app.use(cors({credentials: true,allowedOrigins: [
         'http://localhost:8080', 'http://localhost:8000', 'http://localhost:3000'
@@ -41,7 +43,7 @@ app
   .configure(initServicesAutoload)
   .configure(apiAfterMiddleware)
 //  .configure(start);
-
+console.log(app.get('auth'));
 let server = app.listen(process.env['API_PORT']);
 server.on('listening',() => logServerConfig('API'))
 

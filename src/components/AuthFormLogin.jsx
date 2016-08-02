@@ -1,6 +1,8 @@
 //import { connect } from '~/src/utils/state';
 import cx from 'classnames';
 
+import FlatButton from 'material-ui/FlatButton';
+import Link from './Linkmaterial';
 import {observer} from "mobx-react";
 // styles
 const errorMessage = cx('red', 'm2');
@@ -21,6 +23,15 @@ class AuthModal extends React.Component {
         let form = this.props.form;
         return (
             <form>
+
+<div className="col-8 px2 mx-auto">
+
+<Link className="btn btn-lg btn-fb block" to="/auth/facebook" onClick={form.handleOnSubmit} hoverColor="#8AA62F" icon={<i className="mb3 fa fa-login" />} >
+<div className="mb3"><i className="fa fa-facebook left"></i>Login with Facebook</div></Link>
+
+<Link className="btn btn-lg btn-fb block" to="/auth/instagram" >
+<div className="mb3"><i className="fa fa-instagram left"></i>Login with Instagram</div></Link>
+</div>
                 <TextField
                     hintText="Email"
                     floatingLabelText="Email"
@@ -46,8 +57,7 @@ class AuthModal extends React.Component {
                         onClick={form.handleOnSubmit}>Login
                     </button>
                 </div>
-                <div
-                    className={cx(errorMessage, {
+                <div className={cx(errorMessage, {
         'hide': !form.isValid && form.genericErrorMessage,
       })}
                 >

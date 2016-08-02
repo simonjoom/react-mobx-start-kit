@@ -17,6 +17,10 @@ var _default = _mongoose2.default.model('user', new Schema({
   email: { type: String, required: true, unique: true },
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
+  facebookId: { type: String },
+  facebook: { type: Schema.Types.Mixed },
+  googleId: { type: String },
+  google: { type: Schema.Types.Mixed },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now }
 }));

@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _assign = require('babel-runtime/core-js/object/assign');
@@ -32,110 +32,110 @@ var _logger = require('./logger');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ServicesSetup = function () {
-  function ServicesSetup() {
-    (0, _classCallCheck3.default)(this, ServicesSetup);
-  }
-
-  (0, _createClass3.default)(ServicesSetup, [{
-    key: 'init',
-    value: function init(props) {
-      this.adapter = props.adapter;
-      this.connector = props.connector;
-      this.dir = props.dir;
+    function ServicesSetup() {
+        (0, _classCallCheck3.default)(this, ServicesSetup);
     }
-  }]);
-  return ServicesSetup;
+
+    (0, _createClass3.default)(ServicesSetup, [{
+        key: 'init',
+        value: function init(props) {
+            this.adapter = props.adapter;
+            this.connector = props.connector;
+            this.dir = props.dir;
+        }
+    }]);
+    return ServicesSetup;
 }();
 
 /*
-  Feathers Services Autoload
-*/
+ Feathers Services Autoload
+ */
 
 
 var Services = function () {
-  function Services(app) {
-    (0, _classCallCheck3.default)(this, Services);
+    function Services(app) {
+        (0, _classCallCheck3.default)(this, Services);
 
-    this.app = app;
-  }
-
-  (0, _createClass3.default)(Services, [{
-    key: 'init',
-    value: function init(props) {
-      this.pdir = props.dir;
-      this.dir = _path2.default.resolve(props.dir, 'services');
-      this.connector = props.connector;
-      this.adapter = props.adapter;
-      this.db = this.connector(this.app.get('server').db);
-      this.loadServices();
+        this.app = app;
     }
-  }, {
-    key: 'loadServices',
-    value: function loadServices() {
-      var _this = this;
 
-      (0, _logger.log)('------------------------------------------');
-      (0, _logger.log)('Loading services...');
-      _globule2.default.find(_path2.default.join(this.dir, '*')).map(function ($service) {
-        return _this.attachService($service);
-      });
-      (0, _logger.log)('------------------------------------------');
-    }
-  }, {
-    key: 'attachService',
-    value: function attachService($service) {
-      var dir = $service.replace(this.pdir, '.'); // require build fix (".replace()")
-      var ServiceConfig = require([dir, 'config.js'].join('/')).default;
-      var ServiceModel = require([dir, 'model.js'].join('/')).default;
+    (0, _createClass3.default)(Services, [{
+        key: 'init',
+        value: function init(props) {
+            this.pdir = props.dir;
+            this.dir = _path2.default.resolve(props.dir, 'services');
+            this.connector = props.connector;
+            this.adapter = props.adapter;
+            this.db = this.connector(this.app.get('server').db);
+            this.loadServices();
+        }
+    }, {
+        key: 'loadServices',
+        value: function loadServices() {
+            var _this = this;
 
-      // extend the service object with related model
-      (0, _assign2.default)(ServiceConfig.options, { Model: ServiceModel });
+            (0, _logger.log)('------------------------------------------');
+            (0, _logger.log)('Loading services...');
+            _globule2.default.find(_path2.default.join(this.dir, '*')).map(function ($service) {
+                return _this.attachService($service);
+            });
+            (0, _logger.log)('------------------------------------------');
+        }
+    }, {
+        key: 'attachService',
+        value: function attachService($service) {
+            var dir = $service.replace(this.pdir, '.'); // require build fix (".replace()")
+            var ServiceConfig = require([dir, 'config.js'].join('/')).default;
+            var ServiceModel = require([dir, 'model.js'].join('/')).default;
 
-      // Create an instance of the Feather service
-      var serviceInstance = this.adapter(ServiceConfig.options);
+            // extend the service object with related model
+            (0, _assign2.default)(ServiceConfig.options, { Model: ServiceModel });
 
-      // Attach the service to the app server
-      (0, _logger.log)('Service', ServiceConfig.namespace);
-      this.app.use(ServiceConfig.namespace, serviceInstance);
+            // Create an instance of the Feather service
+            var serviceInstance = this.adapter(ServiceConfig.options);
 
-      // get the service
-      var service = this.app.service(ServiceConfig.namespace);
+            // Attach the service to the app server
+            (0, _logger.log)('Service', ServiceConfig.namespace);
+            this.app.use(ServiceConfig.namespace, serviceInstance);
 
-      // Setup our HOOKS (before/after)
-      var beforeHooksDir = [dir, 'hooks.before.js'].join('/');
-      var afterHooksDir = [dir, 'hooks.after.js'].join('/');
-      service.before(require(beforeHooksDir).default);
-      service.after(require(afterHooksDir).default);
-    }
-  }]);
-  return Services;
+            // get the service
+            var service = this.app.service(ServiceConfig.namespace);
+
+            // Setup our HOOKS (before/after)
+            var beforeHooksDir = [dir, 'hooks.before.js'].join('/');
+            var afterHooksDir = [dir, 'hooks.after.js'].join('/');
+            service.before(require(beforeHooksDir).default);
+            service.after(require(afterHooksDir).default);
+        }
+    }]);
+    return Services;
 }();
 
 var servicesSetup = new ServicesSetup();
 
 function setupServicesAutoload($props) {
-  servicesSetup.init($props);
+    servicesSetup.init($props);
 }
 
 function initServicesAutoload() {
-  new Services(this).init(servicesSetup);
+    new Services(this).init(servicesSetup);
 }
 ;
 
 (function () {
-  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-    return;
-  }
+    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+        return;
+    }
 
-  __REACT_HOT_LOADER__.register(ServicesSetup, 'ServicesSetup', 'api/services.js');
+    __REACT_HOT_LOADER__.register(ServicesSetup, 'ServicesSetup', 'api/services.js');
 
-  __REACT_HOT_LOADER__.register(Services, 'Services', 'api/services.js');
+    __REACT_HOT_LOADER__.register(Services, 'Services', 'api/services.js');
 
-  __REACT_HOT_LOADER__.register(servicesSetup, 'servicesSetup', 'api/services.js');
+    __REACT_HOT_LOADER__.register(servicesSetup, 'servicesSetup', 'api/services.js');
 
-  __REACT_HOT_LOADER__.register(setupServicesAutoload, 'setupServicesAutoload', 'api/services.js');
+    __REACT_HOT_LOADER__.register(setupServicesAutoload, 'setupServicesAutoload', 'api/services.js');
 
-  __REACT_HOT_LOADER__.register(initServicesAutoload, 'initServicesAutoload', 'api/services.js');
+    __REACT_HOT_LOADER__.register(initServicesAutoload, 'initServicesAutoload', 'api/services.js');
 })();
 
 ;
